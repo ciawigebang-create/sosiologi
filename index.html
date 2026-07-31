@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul & Ujian Interaktif Sosiologi Kelas X</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 5px solid #ffc107;
+        }
+        .sticky-score-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .card-custom {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            margin-bottom: 1.5rem;
+        }
+        .concept-badge {
+            font-size: 0.8rem;
+            background-color: #e7f1ff;
+            color: #0d6efd;
+            border: 1px solid #b6d4fe;
+            border-radius: 20px;
+            padding: 4px 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .correct-answer {
+            background-color: #d1e7dd !important;
+            border-color: #badbcc !important;
+            color: #0f5132 !important;
+        }
+        .wrong-answer {
+            background-color: #f8d7da !important;
+            border-color: #f5c2c7 !important;
+            color: #842029 !important;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+            font-weight: 600;
+        }
+        .essay-key {
+            display: none;
+            background-color: #e2e3e5;
+            border-left: 4px solid #0d6efd;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="fw-bold"><i class="fa-solid fa-book-open-reader me-2"></i>Modul & Ujian Interaktif Sosiologi</h1>
+        <p class="lead mb-0">Sejarah, Ruang Lingkup, Hakikat, dan Fungsi Sosiologi (Kelas X)</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <ul class="nav nav-pills nav-justified mb-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active py-3 fs-5" id="pills-materi-tab" data-bs-toggle="pill" data-bs-target="#pills-materi" type="button" role="tab"><i class="fa-solid fa-file-lines me-2"></i>Materi Lengkap</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link py-3 fs-5" id="pills-pg-tab" data-bs-toggle="pill" data-bs-target="#pills-pg" type="button" role="tab"><i class="fa-solid fa-list-check me-2"></i>35 Pilihan Ganda</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link py-3 fs-5" id="pills-esai-tab" data-bs-toggle="pill" data-bs-target="#pills-esai" type="button" role="tab"><i class="fa-solid fa-pen-to-square me-2"></i>15 Soal Esai</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        
+        <div class="tab-pane fade show active" id="pills-materi" role="tabpanel">
+            <div class="row g-4">
+                
+                <div class="col-12">
+                    <div class="card card-custom p-4">
+                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-clock-rotate-left me-2"></i>1. Sejarah Kelahiran Sosiologi</h2>
+                        <p>Sosiologi tergolong ilmu pengetahuan yang relatif muda, lahir pada pertengahan abad ke-XIX. Kelahiran sosiologi dilatarbelakangi oleh dua peristiwa besar dunia:</p>
+                        <div class="row mt-3">
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 border rounded bg-light h-100">
+                                    <h4 class="text-secondary"><i class="fa-solid fa-industry me-2"></i>Revolusi Industri (Inggris)</h4>
+                                    <p>Menyebabkan kesenjangan sosial yang tajam antara masyarakat pusat industri dengan daerah.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 border rounded bg-light h-100">
+                                    <h4 class="text-secondary"><i class="fa-solid fa-land-mine-on me-2"></i>Revolusi Sosial (Prancis)</h4>
+                                    <p>Sistem teokrasi dan absolutisme memicu perlawanan (Penyerbuan Penjara Bastile).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card card-custom p-4">
+                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-arrows-to-eye me-2"></i>2. Batasan dan Ruang Lingkup Sosiologi</h2>
+                        <p>Secara etimologi, sosiologi berasal dari kata Latin <em>socius</em> (kawan) dan Yunani <em>logos</em> (bicara). Tokoh-tokoh sosiologi memiliki batasan definisi seperti:</p>
+                        <ul>
+                            <li><strong>Auguste Comte:</strong> Ilmu positif tentang masyarakat (Bapak Sosiologi).</li>
+                            <li><strong>Max Weber:</strong> Ilmu mengenai tindakan sosial (social action).</li>
+                            <li><strong>Émile Durkheim:</strong> Ilmu yang mempelajari fakta sosial yang eksternal, memaksa, dan umum.</li>
+                        </ul>
+                        <p>Objek kajian sosiologi mencakup <strong>Objek Material</strong> (manusia & masyarakat) dan <strong>Objek Formal</strong> (hubungan antarmanusia dan proses interaksinya).</p>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card card-custom p-4">
+                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-magnifying-glass-chart me-2"></i>3. Fungsi Sosiologi untuk Mengenali Gejala Sosial</h2>
+                        <p>Kita sering melihat berbagai gejala sosial yang tanpa disadari muncul sebagai masalah sosial. Permasalahan sosial berkaitan erat dengan arah perubahan sosial. Hukum memiliki peran sebagai pengatur (interaksi kodrati/organis), pengawas (saat terjadi perubahan sosial), dan penyelesaian masalah (saat terjadi masalah berat).</p>
+
+                        <h4 class="mt-4 text-secondary">A. Sifat dan Hakikat Sosiologi</h4>
+                        <ol class="list-group list-group-numbered mb-3">
+                            <li class="list-group-item">Termasuk <strong>ilmu-ilmu sosial</strong>, bukan ilmu alam atau humaniora.</li>
+                            <li class="list-group-item">Bersifat <strong>Kategoris</strong>: Membatasi diri pada apa yang terjadi, bukan apa yang seharusnya terjadi.</li>
+                            <li class="list-group-item">Ilmu pengetahuan <strong>Murni (Pure Science)</strong>: Bertujuan mengembangkan ilmu secara abstrak, bukan terapan (applied science).</li>
+                            <li class="list-group-item">Bersifat <strong>Abstrak / Teoretis</strong>: Menyusun abstraksi dari hasil observasi untuk menjelaskan sebab-akibat.</li>
+                            <li class="list-group-item">Bertujuan menghasilkan <strong>pengertian dan pola-pola umum</strong>.</li>
+                            <li class="list-group-item">Ilmu pengetahuan yang <strong>Rasional</strong> dan menggunakan metode terukur.</li>
+                            <li class="list-group-item">Termasuk <strong>ilmu pengetahuan Umum</strong>: Mempelajari gejala umum dalam setiap interaksi secara empiris.</li>
+                        </ol>
+
+                        <h4 class="mt-4 text-secondary">B. Fungsi Sosiologi</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 border rounded border-start border-primary border-4 bg-light h-100">
+                                    <h5 class="fw-bold">1) Sosiolog sebagai Profesi</h5>
+                                    <ul>
+                                        <li><strong>Guru/Pendidik:</strong> Mengajar tidak menggurui, memahami kondisi peserta didik, dan mencetak siswa yang mengamalkan ilmunya.</li>
+                                        <li><strong>Peneliti Handal:</strong> Mengumpulkan data, menganalisis, menjernihkan anggapan keliru dengan prinsip kehati-hatian.</li>
+                                        <li><strong>Mediator:</strong> Menyelesaikan masalah hubungan masyarakat (misal: rembug pernikahan) dengan memahami adat istiadat.</li>
+                                        <li><strong>Penengah Konflik:</strong> Mengatasi konflik karena paham peta konflik dan manajemen resolusi (misal: sengketa tanah).</li>
+                                        <li><strong>Agen Perubahan:</strong> Membantu masyarakat menerima perubahan dengan baik (misal: sosialisasi konversi gas elpiji).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 border rounded border-start border-success border-4 bg-light h-100">
+                                    <h5 class="fw-bold">2) Sosiologi sebagai Ilmu Pengetahuan</h5>
+                                    <ul>
+                                        <li><strong>Perencanaan Sosial:</strong> Mempersiapkan masa depan dan meminimumkan ekses pembangunan. Menjadikan manusia sebagai subjek. Sosiologi paham kebudayaan faktual masyarakat.</li>
+                                        <li><strong>Perencanaan Pembangunan:</strong> Meningkatkan kesejahteraan secara terencana dalam 3 tahap:
+                                            <ul class="mt-2">
+                                                <li><em>Tahap Perencanaan:</em> Mengidentifikasi kebutuhan dan pusat kekuasaan.</li>
+                                                <li><em>Tahap Pelaksanaan:</em> Mengamati perubahan dan kekuatan sosial.</li>
+                                                <li><em>Tahap Evaluasi:</em> Menganalisis efek pembangunan (pengadaan, pembetulan, peningkatan).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-pg" role="tabpanel">
+            
+            <div class="p-3 mb-4 rounded border sticky-score-bar d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-0 fw-bold"><i class="fa-solid fa-chart-line me-2"></i>Status Nilai Pilihan Ganda</h5>
+                    <small class="text-muted" id="answered-count">Terjawab: 0 / 35 Soal</small>
+                </div>
+                <div>
+                    <span class="fs-4 fw-bold text-primary" id="score-display">0 / 100</span>
+                    <button class="btn btn-primary btn-sm ms-3" onclick="submitPG()"><i class="fa-solid fa-paper-plane me-1"></i> Submit & Cek Hasil</button>
+                </div>
+            </div>
+
+            <form id="quizForm">
+                <div id="pgContainer"></div>
+            </form>
+            
+            <div class="text-center my-4">
+                <button class="btn btn-success btn-lg px-5" onclick="submitPG()"><i class="fa-solid fa-check-double me-2"></i> Periksa Hasil PG</button>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-esai" role="tabpanel">
+            <div class="card card-custom p-4 mb-4">
+                <div class="d-md-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+                    <div>
+                        <h3 class="fw-bold text-primary mb-1"><i class="fa-solid fa-pen-nib me-2"></i>15 Soal Esai Sosiologi</h3>
+                        <p class="text-muted mb-0">Tuliskan jawaban Anda terlebih dahulu pada kolom yang disediakan.</p>
+                    </div>
+                    <div class="mt-3 mt-md-0">
+                        <div class="input-group">
+                            <input type="password" id="teacherPass" class="form-control" placeholder="Password Guru">
+                            <button class="btn btn-warning fw-bold" onclick="unlockEssay()"><i class="fa-solid fa-key me-1"></i> Buka Kunci Jawaban</button>
+                        </div>
+                        <small class="text-muted d-block mt-1 text-end">Hint: <code>guru123</code> atau <code>sosiologi2026</code></small>
+                    </div>
+                </div>
+
+                <div id="essayContainer"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Data Soal Pilihan Ganda (35 Soal)
+    const pgData = [
+        { q: "Sosiologi merupakan ilmu pengetahuan yang relatif muda. Kelahiran sosiologi secara resmi ditandai oleh terbitnya karya Auguste Comte yang berjudul ....", o: ["Sociological Imagination", "Positive Philosophy", "The Social Fact", "Rules of Sociological Method"], a: 1, c: "★ Soal #1 (Sejarah Sosiologi)", e: "Auguste Comte menerbitkan 'Positive Philosophy' (1838)." },
+        { q: "Revolusi Industri di Inggris memicu lahirnya sosiologi karena timbulnya permasalahan sosial berupa ....", o: ["Pemerintahan absolutisme", "Kesenjangan ekonomi antara pusat industri dan daerah", "Penyerbuan Penjara Bastile", "Sistem pemerintahan teokrasi"], a: 1, c: "★ Soal #2 (Latar Belakang Industri)", e: "Industrialisasi di Inggris menyebabkan ketimpangan ekonomi." },
+        { q: "Secara etimologi, kata 'Sosiologi' berasal dari kata 'Socius' dan 'Logos'. Arti dari kata 'Socius' adalah ....", o: ["Ilmu", "Masyarakat", "Kawan / Teman", "Berbicara"], a: 2, c: "★ Soal #3 (Etimologi)", e: "Socius (Latin) berarti kawan/teman." },
+        { q: "Tokoh sosiologi yang mendefinisikan sosiologi sebagai ilmu yang mempelajari tindakan sosial (social action) adalah ....", o: ["Auguste Comte", "Émile Durkheim", "Max Weber", "Karl Marx"], a: 2, c: "★ Soal #4 (Definisi Ahli)", e: "Max Weber memfokuskan sosiologi pada tindakan sosial." },
+        { q: "Menurut Émile Durkheim, fakta sosial memiliki sifat eksternal, umum, dan memaksa. Contoh fakta sosial adalah ....", o: ["Perkawinan", "Gaya busana", "Hobi pribadi", "Opini individu"], a: 0, c: "★ Soal #5 (Fakta Sosial)", e: "Perkawinan adalah aturan di luar individu yang bersifat memaksa." },
+        { q: "Objek formal utama dari disiplin ilmu Sosiologi adalah ....", o: ["Kebudayaan", "Proses metabolisme", "Hubungan antarmanusia dan proses interaksinya", "Sistem pemerintahan"], a: 2, c: "★ Soal #6 (Objek Formal)", e: "Sosiologi menekankan pada hubungan/interaksi antarmanusia." },
+        { q: "Faktor psikologis yang bekerja saat seseorang ikut menyumbang korban karena merasakan berada di posisi korban disebut ....", o: ["Sugesti", "Imitasi", "Empati", "Identifikasi"], a: 2, c: "★ Soal #7 (Faktor Interaksi)", e: "Empati melibatkan penempatan diri pada posisi orang lain." },
+        { q: "Dorongan dalam diri individu yang memicu semangat mencapai tujuan tanpa iming-iming eksternal disebut ....", o: ["Motivasi Intrinsik", "Motivasi Ekstrinsik", "Sugesti", "Konformitas"], a: 0, c: "★ Soal #8 (Motivasi)", e: "Berasal dari dalam kesadaran pribadi." },
+        { q: "Norma sosial di masyarakat diciptakan dengan tujuan utama untuk ....", o: ["Membatasi hak asasi", "Menciptakan ketertiban", "Kekuasaan kelompok", "Menghukum orang lemah"], a: 1, c: "★ Soal #9 (Fungsi Norma)", e: "Fungsinya menjaga keteraturan dan keharmonisan." },
+        { q: "Sikap mementingkan diri sendiri dan tidak peduli terhadap gotong royong disebut ....", o: ["Solidaritas", "Individualisme", "Interaksi positif", "Toleransi"], a: 1, c: "★ Soal #10 (Individualisme)", e: "Mengutamakan diri sendiri di atas kelompok." },
+        
+        // --- 15 Soal Lanjutan (Campuran dari yang sebelumnya) ---
+        { q: "Pusat kajian khusus atau sudut pandang spesifik dari ilmu pengetahuan disebut ....", o: ["Objek Material", "Objek Formal", "Objek Empiris", "Objek Praktis"], a: 1, c: "★ Soal #11 (Objek Sosiologi)", e: "Objek formal adalah fokus/sudut pandang suatu ilmu." },
+        { q: "Proses penerimaan pandangan dari tokoh terkemuka tanpa dikritisi disebut ....", o: ["Motivasi", "Sugesti", "Identifikasi", "Empati"], a: 1, c: "★ Soal #12 (Sugesti)", e: "Pengaruh diterima secara langsung tanpa pemikiran kritis." },
+        { q: "Seorang anak yang ingin sama persis secara mendalam (nilai, sikap) dengan idolanya mengalami ....", o: ["Imitasi", "Simpati", "Identifikasi", "Motivasi"], a: 2, c: "★ Soal #13 (Identifikasi)", e: "Identifikasi melekat secara mendalam, bukan sekadar fisik." },
+        { q: "Seorang siswa berbohong mengaku macet agar tidak dimarahi, tindakan membenarkan diri ini disebut ....", o: ["Rasionalisasi", "Sublimasi", "Empati", "Sugesti"], a: 0, c: "★ Soal #14 (Rasionalisasi)", e: "Rasionalisasi adalah mencari pembenaran atas kesalahan." },
+        { q: "Internalisasi nilai sosial berarti individu mematuhi aturan karena ....", o: ["Takut dihukum", "Pengawasan", "Kesadaran moral", "Mengharapkan pujian"], a: 2, c: "★ Soal #15 (Internalisasi)", e: "Nilai sudah menyatu menjadi kesadaran dalam diri." },
+        { q: "Kepatuhan semu terjadi ketika ....", o: ["Aturan dipatuhi hanya jika ada pengawasan", "Individu sadar hukum", "Terjadi solidaritas", "Norma hilang"], a: 0, c: "★ Soal #16 (Kepatuhan Semu)", e: "Mematuhi hanya karena kontrol luar/takut sanksi." },
+        { q: "Menyebarkan hoaks merusak norma sosial berupa ....", o: ["Kejujuran dan tanggung jawab", "Toleransi", "Empati", "Imitasi"], a: 0, c: "★ Soal #17 (Norma)", e: "Hoaks melanggar integritas dan kejujuran." },
+        { q: "Sikap terbuka dan menghargai perbedaan opini disebut ....", o: ["Sugesti", "Toleransi", "Egoisme", "Identifikasi"], a: 1, c: "★ Soal #18 (Toleransi)", e: "Toleransi adalah saling menghargai pandangan." },
+        { q: "Perkembangan sosiologi di Amerika berfokus pada ....", o: ["Teori dan metodologi di universitas", "Revolusi industri", "Kritik teokrasi", "Masalah pertanian"], a: 0, c: "★ Soal #19 (Sejarah)", e: "Di Amerika, sosiologi dikembangkan secara akademik." },
+        { q: "Sosiologi di Eropa (social problem solving) mengarah pada ....", o: ["Sosiologi murni", "Sosiologi terapan", "Psikologi", "Antropologi"], a: 1, c: "★ Soal #20 (Sejarah)", e: "Digunakan untuk mencari jalan keluar (terapan)." },
+        { q: "Jurusan Sosiologi pertama di Indonesia didirikan di ....", o: ["UI", "UNPAD", "UGM", "UNAIR"], a: 2, c: "★ Soal #21 (Sejarah Indo)", e: "Di UGM pada tanggal 7 September 1955." },
+        { q: "Manusia dan masyarakat yang juga dipelajari oleh Antropologi berkedudukan sebagai ....", o: ["Objek Formal", "Objek Material", "Subjek", "Teori"], a: 1, c: "★ Soal #22 (Objek)", e: "Objek material adalah substansi kajian yang sifatnya umum." },
+        { q: "Penjara Bastile di Prancis menjadi simbol perlawanan terhadap ....", o: ["Demokrasi", "Fasisme", "Kediktatoran dan teokrasi", "Industri"], a: 2, c: "★ Soal #23 (Sejarah Prancis)", e: "Simbol perlawanan kediktatoran Louis XIV." },
+        { q: "Sugesti dari media massa membuktikan bahwa interaksi dapat terjadi melalui ....", o: ["Tatap muka saja", "Komunikasi tidak langsung (digital)", "Kontak fisik", "Identifikasi"], a: 1, c: "★ Soal #24 (Media & Interaksi)", e: "Media memfasilitasi pengaruh walau tanpa tatap muka." },
+        { q: "Sikap saling membantu korban bencana karena kasihan (tanpa aksi lebih jauh) disebut ....", o: ["Empati", "Identifikasi", "Simpati", "Sugesti"], a: 2, c: "★ Soal #25 (Simpati)", e: "Simpati berhenti pada perasaan kasihan." },
+
+        // --- 10 Soal PG BARU (Materi Fungsi, Sifat, Hakikat) ---
+        { q: "Sosiologi membatasi diri dengan apa yang terjadi (das sein) dan bukan pada apa yang seharusnya terjadi (das sollen). Hal ini menunjukkan hakikat sosiologi sebagai ilmu pengetahuan yang ....", o: ["Empiris", "Murni", "Kategoris", "Abstrak"], a: 2, c: "★ Soal #26 (Sifat Kategoris)", e: "Kategoris berarti membatasi diri pada fakta/apa yang sedang terjadi, bukan nilai ideal (apa yang seharusnya)." },
+        { q: "Ilmu sosiologi bertujuan untuk membentuk dan mengembangkan ilmu pengetahuan secara abstrak, bukan ditujukan langsung untuk dipraktikkan. Ini berarti sosiologi adalah ....", o: ["Applied Science", "Pure Science", "Ilmu Khusus", "Humaniora"], a: 1, c: "★ Soal #27 (Pure Science)", e: "Sebagai pure science (ilmu murni), fokus sosiologi adalah pengembangan teori." },
+        { q: "Sosiolog yang berupaya menyelesaikan sengketa tanah warisan dengan mencari akar permasalahan dan status ahli waris sedang menjalankan fungsinya sebagai ....", o: ["Pendidik", "Peneliti", "Agen Perubahan", "Penengah Konflik"], a: 3, c: "★ Soal #28 (Peran Sosiolog)", e: "Sebagai penengah konflik, sosiolog menggunakan manajemen resolusi konflik." },
+        { q: "Dalam tahap pembangunan, sosiologi berguna untuk mengidentifikasi berbagai gejala sosial dan kebutuhan di lapisan masyarakat. Hal ini dilakukan pada tahap ....", o: ["Perencanaan", "Pelaksanaan", "Evaluasi", "Penilaian"], a: 0, c: "★ Soal #29 (Pembangunan: Perencanaan)", e: "Identifikasi kebutuhan masyarakat dilakukan di awal (Tahap Perencanaan)." },
+        { q: "Ketika terjadi permasalahan sosial yang bersumber dari perubahan sosial yang amat berat dan tidak terkendali, maka hukum berperan sebagai ....", o: ["Pengatur", "Penyelesaian masalah", "Pengawas", "Pendorong"], a: 1, c: "★ Soal #30 (Fungsi Hukum)", e: "Hukum sebagai penyelesaian masalah digunakan ketika permasalahan sosial berat." },
+        { q: "Upaya mempersiapkan masa depan kehidupan masyarakat dengan tujuan meminimumkan ekses/dampak buruk dari sebuah program (contoh: pemindahan penduduk bedol desa) merupakan pengertian dari ....", o: ["Penelitian sosial", "Perencanaan sosial", "Tahap evaluasi", "Mediasi konflik"], a: 1, c: "★ Soal #31 (Perencanaan Sosial)", e: "Perencanaan sosial menyiapkan pedoman cara hidup untuk mengatasi hambatan." },
+        { q: "Sosiolog memberikan sosialisasi tentang konversi minyak tanah ke gas elpiji agar masyarakat mau mengadopsi teknologi tersebut tanpa ragu. Peran sosiolog di sini adalah sebagai ....", o: ["Agen Perubahan", "Pendidik", "Mediator", "Peneliti"], a: 0, c: "★ Soal #32 (Agen Perubahan)", e: "Membantu dan mengarahkan masyarakat menerima perubahan sosial." },
+        { q: "Tahap di mana sosiolog bertugas menganalisis dan mengkaji efek (baik dan buruk) dari sebuah pembangunan yang telah berjalan disebut tahap ....", o: ["Evaluasi", "Pelaksanaan", "Perencanaan", "Identifikasi"], a: 0, c: "★ Soal #33 (Pembangunan: Evaluasi)", e: "Evaluasi bertujuan untuk perbaikan dan penilaian akhir suatu program." },
+        { q: "Salah satu sifat sosiologi adalah Abstrak atau Teoretis, yang artinya sosiologi ....", o: ["Menyelesaikan masalah konkret individu", "Mempelajari hal-hal gaib", "Menyusun abstraksi dari observasi untuk menjelaskan sebab-akibat", "Hanya berlaku di ranah filsafat"], a: 2, c: "★ Soal #34 (Sifat Abstrak)", e: "Abstrak artinya menyusun kerangka logis dari observasi untuk menjadi teori umum." },
+        { q: "Dalam melakukan riset, seorang sosiolog dilarang memanipulasi data dan harus memiliki prinsip kehati-hatian. Hal ini berkaitan dengan profesinya sebagai ....", o: ["Mediator", "Pendidik", "Peneliti yang handal", "Penengah konflik"], a: 2, c: "★ Soal #35 (Peneliti Sosiologi)", e: "Sosiolog sebagai peneliti harus menjaga objektivitas dan prinsip ilmiah (kehati-hatian)." }
+    ];
+
+    // Data Soal Esai (15 Soal)
+    const essayData = [
+        { q: "Jelaskan latar belakang historis lahirnya ilmu Sosiologi di Eropa pada abad ke-19!", k: "Dilatarbelakangi oleh Revolusi Industri (Inggris) yang memicu kesenjangan dan Revolusi Sosial (Prancis) yang meruntuhkan kediktatoran/absolutisme." },
+        { q: "Mengapa Auguste Comte dijuluki sebagai 'Bapak Sosiologi'?", k: "Karena ia adalah orang pertama yang mengusulkan istilah 'Sosiologi' dalam bukunya Positive Philosophy (1838)." },
+        { q: "Bandingkan definisi Sosiologi menurut Max Weber dan Émile Durkheim!", k: "Max Weber: Mempelajari tindakan sosial (social action). Émile Durkheim: Mempelajari fakta sosial (eksternal, umum, memaksa)." },
+        { q: "Bedakan antara Objek Material dan Objek Formal dalam ilmu Sosiologi!", k: "Objek Material: Sasaran umum kajian (Manusia & Masyarakat). Objek Formal: Pusat kajian khusus (Hubungan antarmanusia/interaksi sosial)." },
+        { q: "Mengapa Sosiologi di Indonesia baru berkembang pesat setelah Indonesia merdeka?", k: "Karena pada masa penjajahan Belanda, pendidikan ilmu sosial dibatasi, Belanda lebih memprioritaskan ilmu hukum." },
+        { q: "Jelaskan perbedaan antara Simpati dan Empati!", k: "Simpati: Perasaan tertarik/kasihan. Empati: Lebih mendalam, kemampuan menempatkan diri pada posisi orang lain hingga mendorong aksi nyata." },
+        { q: "Bagaimana Sugesti dapat memengaruhi opini publik?", k: "Sugesti mudah diterima jika dari tokoh berwibawa/situasi cemas, informasi diterima tanpa pertimbangan kritis." },
+        { q: "Bedakan antara Internalisasi Nilai Sosial dengan Kepatuhan Semu!", k: "Internalisasi: Aturan diserap dan dipatuhi berdasar moral (tanpa pengawasan). Kepatuhan semu: Patuh karena takut dihukum." },
+        { q: "Apa yang dimaksud dengan Rasionalisasi dalam pelanggaran aturan?", k: "Usaha mencari alasan pembenaran yang seolah-olah masuk akal atas kesalahan yang dilakukan." },
+        { q: "Mengapa individualisme melemahkan solidaritas sosial?", k: "Berfokus pada kepentingan pribadi sehingga menurunkan semangat gotong royong masyarakat." },
+        
+        // --- 5 Soal Esai BARU (Materi Hakikat & Fungsi) ---
+        { q: "Sosiologi merupakan ilmu pengetahuan yang bersifat Kategoris dan Murni (Pure Science). Jelaskan makna kedua sifat tersebut!", k: "Kategoris: Sosiologi membatasi diri pada fakta (apa yang terjadi), bukan nilai ideal (apa yang seharusnya terjadi). Murni (Pure Science): Bertujuan mengembangkan teori dan abstraksi secara ilmiah, bukan sekadar ilmu terapan untuk dipraktikkan langsung." },
+        { q: "Jelaskan peranan sosiolog sebagai Agen Perubahan (Agent of Change) disertai satu contoh nyata!", k: "Sosiolog memprediksi dampak perubahan dan menyosialisasikannya agar masyarakat siap menerima inovasi. Contoh: Memberikan penyuluhan dan pendampingan kepada masyarakat desa terkait program konversi penggunaan kompor gas dari minyak tanah." },
+        { q: "Mengapa sosiologi sangat diperlukan pada 'Tahap Perencanaan' dalam proses pembangunan?", k: "Karena pada tahap ini, sosiologi menyajikan data mengenai kebutuhan riil, struktur kekuasaan, saluran komunikasi, serta pola kebudayaan masyarakat sehingga program pembangunan tepat sasaran dan tidak menimbulkan resistensi." },
+        { q: "Apa yang dimaksud dengan Perencanaan Sosial? Berikan contohnya!", k: "Upaya mempersiapkan masa depan masyarakat untuk meminimumkan dampak negatif (ekses) suatu perubahan. Contoh: Merencanakan program relokasi (bedol desa) bagi warga yang daerahnya dijadikan proyek waduk nasional." },
+        { q: "Bagaimana peran sosiolog sebagai Penengah Konflik bekerja dalam masyarakat?", k: "Sosiolog memetakan masalah, menganalisis aktor yang berkonflik (peta konflik), dan menerapkan kemampuan manajemen resolusi. Misalnya, mencari akar sejarah sengketa tanah antarwarga lalu mencarikan alternatif penyelesaian kekeluargaan." }
+    ];
+
+    // Render Soal PG
+    function renderPG() {
+        const container = document.getElementById('pgContainer');
+        let html = '';
+        pgData.forEach((item, index) => {
+            html += `
+            <div class="card card-custom p-4" id="card-pg-${index}">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="concept-badge"><i class="fa-solid fa-tag me-1"></i>${item.c}</span>
+                    <span class="badge bg-secondary">Soal ${index + 1} / ${pgData.length}</span>
+                </div>
+                <h5 class="fw-bold mt-2">${index + 1}. ${item.q}</h5>
+                <div class="mt-3">
+            `;
+            item.o.forEach((opt, oIndex) => {
+                html += `
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="pg_${index}" id="pg_${index}_${oIndex}" value="${oIndex}" onchange="updateCount()">
+                    <label class="form-check-label w-100 p-2 rounded border" for="pg_${index}_${oIndex}">
+                        ${String.fromCharCode(65 + oIndex)}. ${opt}
+                    </label>
+                </div>
+                `;
+            });
+            html += `
+                </div>
+                <div class="explanation-box alert alert-success mt-3 d-none" id="exp_${index}">
+                    <strong><i class="fa-solid fa-circle-info me-1"></i> Pembahasan:</strong> ${item.e}
+                </div>
+            </div>
+            `;
+        });
+        container.innerHTML = html;
+        document.getElementById('answered-count').innerText = `Terjawab: 0 / ${pgData.length} Soal`;
+    }
+
+    // Render Soal Esai
+    function renderEssay() {
+        const container = document.getElementById('essayContainer');
+        let html = '';
+        essayData.forEach((item, index) => {
+            html += `
+            <div class="mb-4 p-3 border rounded bg-light">
+                <h5 class="fw-bold text-dark"><i class="fa-solid fa-circle-question text-primary me-2"></i>Soal ${index + 1}</h5>
+                <p class="fs-6 mb-2">${item.q}</p>
+                <div class="mb-2">
+                    <textarea class="form-control" rows="3" placeholder="Ketikkan jawaban Anda di sini..."></textarea>
+                </div>
+                <div class="essay-key" id="essayKey_${index}">
+                    <strong><i class="fa-solid fa-key me-1 text-warning"></i> Kunci Jawaban Resmi:</strong>
+                    <p class="mb-0 mt-1">${item.k}</p>
+                </div>
+            </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // Hitung Jumlah Terjawab PG
+    function updateCount() {
+        let count = 0;
+        pgData.forEach((_, index) => {
+            const selected = document.querySelector(`input[name="pg_${index}"]:checked`);
+            if (selected) count++;
+        });
+        document.getElementById('answered-count').innerText = `Terjawab: ${count} / ${pgData.length} Soal`;
+    }
+
+    // Submit & Koreksi PG
+    function submitPG() {
+        let correctCount = 0;
+        const total = pgData.length;
+
+        pgData.forEach((item, index) => {
+            const selected = document.querySelector(`input[name="pg_${index}"]:checked`);
+            const expBox = document.getElementById(`exp_${index}`);
+            
+            // Show explanation
+            expBox.classList.remove('d-none');
+
+            // Reset Styles
+            for(let i=0; i<4; i++) {
+                const label = document.querySelector(`label[for="pg_${index}_${i}"]`);
+                label.classList.remove('correct-answer', 'wrong-answer');
+            }
+
+            if (selected) {
+                const val = parseInt(selected.value);
+                if (val === item.a) {
+                    correctCount++;
+                    document.querySelector(`label[for="pg_${index}_${val}"]`).classList.add('correct-answer');
+                } else {
+                    document.querySelector(`label[for="pg_${index}_${val}"]`).classList.add('wrong-answer');
+                    document.querySelector(`label[for="pg_${index}_${item.a}"]`).classList.add('correct-answer');
+                }
+            } else {
+                // Highlight correct answer if missed
+                document.querySelector(`label[for="pg_${index}_${item.a}"]`).classList.add('correct-answer');
+            }
+        });
+
+        // Calculate score (Scale 0-100)
+        const finalScore = Math.round((correctCount / total) * 100);
+        const scoreDisplay = document.getElementById('score-display');
+        scoreDisplay.innerText = `${finalScore} / 100`;
+
+        if(finalScore >= 75) {
+            scoreDisplay.className = "fs-4 fw-bold text-success";
+        } else {
+            scoreDisplay.className = "fs-4 fw-bold text-danger";
+        }
+
+        alert(`Pemeriksaan Selesai!\nSkor Anda: ${finalScore}\nJumlah Benar: ${correctCount} dari ${total} Soal.`);
+    }
+
+    // Unlocking Essay Answers with Password
+    function unlockEssay() {
+        const pass = document.getElementById('teacherPass').value;
+        if (pass === "guru123" || pass === "sosiologi2026") {
+            essayData.forEach((_, index) => {
+                document.getElementById(`essayKey_${index}`).style.display = 'block';
+            });
+            alert("Kunci jawaban esai berhasil dibuka!");
+        } else {
+            alert("Password salah! Gunakan password guru (guru123 / sosiologi2026).");
+        }
+    }
+
+    // On Load
+    window.onload = function() {
+        renderPG();
+        renderEssay();
+    };
+</script>
+</body>
+</html>
