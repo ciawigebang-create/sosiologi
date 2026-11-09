@@ -1,430 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modul & Ujian Interaktif Sosiologi Kelas X</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
-            color: white;
-            padding: 2.5rem 0;
-            margin-bottom: 2rem;
-            border-bottom: 5px solid #ffc107;
-        }
-        .sticky-score-bar {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        .card-custom {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            margin-bottom: 1.5rem;
-        }
-        .concept-badge {
-            font-size: 0.8rem;
-            background-color: #e7f1ff;
-            color: #0d6efd;
-            border: 1px solid #b6d4fe;
-            border-radius: 20px;
-            padding: 4px 12px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .correct-answer {
-            background-color: #d1e7dd !important;
-            border-color: #badbcc !important;
-            color: #0f5132 !important;
-        }
-        .wrong-answer {
-            background-color: #f8d7da !important;
-            border-color: #f5c2c7 !important;
-            color: #842029 !important;
-        }
-        .nav-pills .nav-link.active {
-            background-color: #0d6efd;
-            font-weight: 600;
-        }
-        .essay-key {
-            display: none;
-            background-color: #e2e3e5;
-            border-left: 4px solid #0d6efd;
-            padding: 12px;
-            margin-top: 10px;
-            border-radius: 4px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173f35">
+<meta name="description" content="Materi belajar Sosiologi kelas X dengan ilustrasi, latihan pilihan ganda, dan esai interaktif.">
+<title>Ruang Sosiologi — Kelas X</title>
+<style>
+:root{--ink:#18352d;--muted:#61736d;--paper:#f6f5ef;--white:#fffefa;--line:#e3e6dc;--green:#1c5545;--mint:#dff1e4;--coral:#ed7658;--yellow:#f4ca68;--blue:#6ba6ad;--shadow:0 14px 38px #173f3512}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}button{font:inherit}a{color:var(--green)}.wrap{max-width:1160px;margin:auto;padding:0 22px}
+.hero{background:radial-gradient(circle at 80% 15%,#367965 0,transparent 29%),linear-gradient(125deg,#153d34,#225f4d 65%,#31765c);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:370px;height:370px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-200px;box-shadow:0 0 0 34px #ffffff08,0 0 0 70px #ffffff06}
+.hero-inner{min-height:310px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:38px;padding-bottom:38px;position:relative;z-index:1}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#b9e5c9}.hero h1{font-size:clamp(2.25rem,6vw,4.4rem);line-height:1.03;letter-spacing:-.045em;margin:.35rem 0 1rem;max-width:700px}.hero p{font-size:1.06rem;color:#e0f1e7;max-width:660px;margin:0}.hero-art{width:min(27vw,270px);min-width:150px;filter:drop-shadow(0 16px 20px #09251e33)}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.tag{border:1px solid #ffffff40;padding:5px 11px;border-radius:999px;color:#f0fff2;font-size:.8rem}
+.topbar{position:sticky;top:0;z-index:10;background:#f6f5efed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navrow{display:flex;align-items:center;gap:10px;min-height:65px;overflow:auto;scrollbar-width:none}.navrow::-webkit-scrollbar{display:none}.brand{white-space:nowrap;font-weight:850;letter-spacing:-.03em;margin-right:auto;color:var(--green)}.navrow button{border:0;background:transparent;color:var(--muted);white-space:nowrap;padding:9px 12px;border-radius:999px;font-weight:700;cursor:pointer}.navrow button:hover,.navrow button.active{background:var(--mint);color:var(--green)}.progress-mini{font-size:.76rem;color:var(--muted);white-space:nowrap}
+main{padding:26px 0 76px}.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-bottom:22px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.welcome{padding:24px 26px}.welcome h2{margin:0 0 7px;font-size:1.35rem;letter-spacing:-.02em}.welcome p{margin:0;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px}.stat{background:#f3f7ef;border-radius:13px;padding:10px 12px}.stat strong{display:block;color:var(--green);font-size:1.2rem}.stat span{font-size:.76rem;color:var(--muted)}.notice{padding:19px 21px;background:#fff7e6;border-color:#f0e3c3}.notice strong{display:block;color:#795521;margin-bottom:3px}.notice p{margin:0;color:#746b56;font-size:.91rem}
+.chapter-head{display:flex;align-items:center;gap:17px;padding:24px 27px;margin:20px 0 16px;position:relative;overflow:hidden}.chapter-head:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-65px;top:-75px;background:var(--tint);opacity:.8}.chapter-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--tint);font-size:1.7rem;flex:0 0 auto}.chapter-head h2{font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.2;margin:2px 0 5px;letter-spacing:-.03em}.chapter-head p{margin:0;color:var(--muted)}.chapter-head .chapter-number{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);font-weight:850}
+.chapter-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:18px;align-items:start}.content-col{min-width:0}.side-col{position:sticky;top:82px;display:grid;gap:14px}.panel{padding:22px 24px;margin-bottom:16px}.panel h3{margin:0 0 12px;font-size:1.26rem;letter-spacing:-.02em}.panel h4{margin:18px 0 5px;font-size:1rem;color:var(--green)}.panel p{margin:8px 0;color:#334b43}.panel ul{padding-left:21px;margin:7px 0;color:#334b43}.panel li{padding:3px 0}.lead{font-size:1.05rem;color:#33554a!important}.callout{border-left:4px solid var(--coral);background:#fff3ed;border-radius:0 12px 12px 0;padding:12px 15px;margin:15px 0;color:#5d473c}.example{background:#edf6f6;border:1px solid #d9e9e8;border-radius:14px;padding:14px 16px;margin:14px 0}.example strong{color:#27616a}.concept-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.concept{background:#f7f8f3;border:1px solid var(--line);border-radius:15px;padding:15px}.concept h4{margin:0 0 5px;color:var(--green)}.concept p{font-size:.91rem;margin:0;color:#53655f}.map{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:13px 0}.map span{padding:7px 11px;border-radius:10px;background:#edf5e9;color:#315949;font-size:.86rem;font-weight:700}.map b{color:var(--coral)}.targets{display:flex;flex-wrap:wrap;gap:7px;padding:0!important;list-style:none}.targets li{background:#f1f6ef;padding:6px 10px;border-radius:999px;color:#426353;font-size:.83rem}
+.sidebox{padding:17px 18px}.sidebox h3{font-size:.98rem;margin:0 0 10px}.sidebox p{margin:0;color:var(--muted);font-size:.88rem}.sidebox a{display:block;padding:7px 0;border-top:1px solid var(--line);text-decoration:none;font-size:.87rem;line-height:1.4}.sidebox a:first-of-type{border-top:0}.chapter-progress{height:8px;background:#e9eee5;border-radius:9px;overflow:hidden;margin:10px 0}.chapter-progress span{display:block;height:100%;background:linear-gradient(90deg,#64ac7d,#e5bc5f);width:0;transition:width .3s}
+.practice{padding:23px 24px}.practice-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.practice-top p{margin:0;color:var(--muted);font-size:.9rem}.count-pill{background:#eef5ea;color:#315949;border-radius:99px;padding:5px 10px;white-space:nowrap;font-size:.78rem;font-weight:800}.q-track{height:8px;border-radius:99px;background:#e9eee5;margin:16px 0 21px;overflow:hidden}.q-track span{height:100%;display:block;background:var(--coral);transition:width .25s}.question{font-size:1.1rem;font-weight:750;line-height:1.5;margin:0 0 16px}.scenario{font-weight:500;background:#f5f6f1;border:1px solid var(--line);padding:13px 15px;border-radius:13px;margin-bottom:12px}.options{display:grid;gap:9px}.option{background:#fff;border:1px solid #dfe5da;border-radius:13px;padding:12px 14px;text-align:left;color:var(--ink);cursor:pointer;display:flex;gap:11px;align-items:flex-start;transition:transform .12s,border-color .12s}.option:hover:not(:disabled){transform:translateY(-1px);border-color:#84b39a}.option .letter{height:25px;min-width:25px;display:grid;place-items:center;border-radius:8px;background:#eff4ec;color:#426653;font-weight:800;font-size:.8rem}.option:disabled{cursor:default}.option.correct{border-color:#60a878;background:#eff9f0}.option.correct .letter{background:#5eaa76;color:white}.option.wrong{border-color:#e3816c;background:#fff2ee}.option.wrong .letter{background:#e3816c;color:white}
+.feedback{margin-top:14px;padding:13px 15px;border-radius:13px;background:#eef8ef;border:1px solid #d2ead7}.feedback.bad{background:#fff3ed;border-color:#f3d5c8}.feedback strong{display:block;margin-bottom:3px}.feedback p{margin:0;color:#476055;font-size:.92rem}.controls{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:18px}.btn{border:0;border-radius:11px;padding:10px 16px;background:var(--green);color:white;font-weight:750;cursor:pointer}.btn:hover{filter:brightness(1.08)}.btn.secondary{background:#edf3eb;color:var(--green)}.btn:disabled{opacity:.45;cursor:not-allowed}.essay-list{display:grid;gap:9px}.essay{border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden}.essay summary{list-style:none;cursor:pointer;padding:13px 15px;font-weight:700;display:flex;gap:11px;align-items:flex-start}.essay summary::-webkit-details-marker{display:none}.essay summary:before{content:"+";display:grid;place-items:center;min-width:23px;height:23px;border-radius:8px;background:#eff4ec;color:var(--green);font-weight:900}.essay[open] summary:before{content:"−"}.essay-answer{padding:0 16px 15px 49px;color:#4d6259;font-size:.93rem}.essay-answer p{margin:0 0 7px}.essay-answer ul{margin:6px 0}
+.finish{text-align:center;padding:25px;background:#eff8f0;border:1px solid #d6e9d9;border-radius:16px}.finish h3{margin:0 0 5px}.finish-score{font-size:2.3rem;line-height:1;color:var(--green);font-weight:900;margin:14px}.finish p{color:var(--muted)}.footer{background:#173f35;color:#dcebe2;padding:28px 0}.footer p{margin:5px 0;color:#c2d9ca;font-size:.88rem}.footer h3{margin:0;color:#fff}.footer a{color:#c5ecd1}.source-list{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:14px}.source-list a{font-size:.84rem}
+.mobile-hint{display:none}
+@media(max-width:850px){.chapter-layout{grid-template-columns:1fr}.side-col{position:static;grid-template-columns:repeat(2,minmax(0,1fr));order:-1}.intro-grid{grid-template-columns:1fr 1fr}.hero-art{width:210px}}
+@media(max-width:600px){body{font-size:15px}.wrap{padding:0 14px}.hero-inner{min-height:270px;padding-top:29px;padding-bottom:26px;gap:3px}.hero h1{font-size:2.55rem}.hero p{font-size:.96rem}.hero-art{width:125px;min-width:110px;margin-right:-5px}.hero-tags{margin-top:16px}.navrow{min-height:57px;gap:2px}.brand{font-size:.9rem}.navrow button{padding:8px 10px;font-size:.82rem}.progress-mini{display:none}main{padding-top:16px}.intro-grid{grid-template-columns:1fr;gap:11px}.welcome{padding:19px}.notice{padding:15px 17px}.chapter-head{padding:18px;margin:15px 0 11px;gap:12px}.chapter-icon{width:48px;height:48px;border-radius:15px}.chapter-layout{gap:10px}.side-col{grid-template-columns:1fr 1fr;gap:9px}.sidebox{padding:13px}.sidebox h3{font-size:.87rem}.sidebox p,.sidebox a{font-size:.79rem}.panel,.practice{padding:18px 16px;border-radius:16px}.panel h3{font-size:1.15rem}.concept-grid{grid-template-columns:1fr}.question{font-size:1rem}.option{padding:11px 10px;font-size:.92rem}.controls .btn{padding:9px 12px;font-size:.86rem}.essay-answer{padding-left:46px}.stats{gap:6px}.stat{padding:9px}.stat span{font-size:.68rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+<style>.chapter-art svg{width:128px;height:96px;display:block;position:relative;z-index:1}@media(max-width:600px){.chapter-art svg{width:75px;height:62px}}</style>
 </head>
 <body>
-
-<div class="hero-section text-center">
-    <div class="container">
-        <h1 class="fw-bold"><i class="fa-solid fa-book-open-reader me-2"></i>Modul & Ujian Interaktif Sosiologi</h1>
-        <p class="lead mb-0">Sejarah, Ruang Lingkup, Hakikat, dan Fungsi Sosiologi (Kelas X)</p>
-    </div>
-</div>
-
-<div class="container mb-5">
-    <ul class="nav nav-pills nav-justified mb-4" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active py-3 fs-5" id="pills-materi-tab" data-bs-toggle="pill" data-bs-target="#pills-materi" type="button" role="tab"><i class="fa-solid fa-file-lines me-2"></i>Materi Lengkap</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link py-3 fs-5" id="pills-pg-tab" data-bs-toggle="pill" data-bs-target="#pills-pg" type="button" role="tab"><i class="fa-solid fa-list-check me-2"></i>35 Pilihan Ganda</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link py-3 fs-5" id="pills-esai-tab" data-bs-toggle="pill" data-bs-target="#pills-esai" type="button" role="tab"><i class="fa-solid fa-pen-to-square me-2"></i>15 Soal Esai</button>
-        </li>
-    </ul>
-
-    <div class="tab-content" id="pills-tabContent">
-        
-        <div class="tab-pane fade show active" id="pills-materi" role="tabpanel">
-            <div class="row g-4">
-                
-                <div class="col-12">
-                    <div class="card card-custom p-4">
-                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-clock-rotate-left me-2"></i>1. Sejarah Kelahiran Sosiologi</h2>
-                        <p>Sosiologi tergolong ilmu pengetahuan yang relatif muda, lahir pada pertengahan abad ke-XIX. Kelahiran sosiologi dilatarbelakangi oleh dua peristiwa besar dunia:</p>
-                        <div class="row mt-3">
-                            <div class="col-md-6 mb-3">
-                                <div class="p-3 border rounded bg-light h-100">
-                                    <h4 class="text-secondary"><i class="fa-solid fa-industry me-2"></i>Revolusi Industri (Inggris)</h4>
-                                    <p>Menyebabkan kesenjangan sosial yang tajam antara masyarakat pusat industri dengan daerah.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="p-3 border rounded bg-light h-100">
-                                    <h4 class="text-secondary"><i class="fa-solid fa-land-mine-on me-2"></i>Revolusi Sosial (Prancis)</h4>
-                                    <p>Sistem teokrasi dan absolutisme memicu perlawanan (Penyerbuan Penjara Bastile).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="card card-custom p-4">
-                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-arrows-to-eye me-2"></i>2. Batasan dan Ruang Lingkup Sosiologi</h2>
-                        <p>Secara etimologi, sosiologi berasal dari kata Latin <em>socius</em> (kawan) dan Yunani <em>logos</em> (bicara). Tokoh-tokoh sosiologi memiliki batasan definisi seperti:</p>
-                        <ul>
-                            <li><strong>Auguste Comte:</strong> Ilmu positif tentang masyarakat (Bapak Sosiologi).</li>
-                            <li><strong>Max Weber:</strong> Ilmu mengenai tindakan sosial (social action).</li>
-                            <li><strong>Émile Durkheim:</strong> Ilmu yang mempelajari fakta sosial yang eksternal, memaksa, dan umum.</li>
-                        </ul>
-                        <p>Objek kajian sosiologi mencakup <strong>Objek Material</strong> (manusia & masyarakat) dan <strong>Objek Formal</strong> (hubungan antarmanusia dan proses interaksinya).</p>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="card card-custom p-4">
-                        <h2 class="text-primary border-bottom pb-2 mb-3"><i class="fa-solid fa-magnifying-glass-chart me-2"></i>3. Fungsi Sosiologi untuk Mengenali Gejala Sosial</h2>
-                        <p>Kita sering melihat berbagai gejala sosial yang tanpa disadari muncul sebagai masalah sosial. Permasalahan sosial berkaitan erat dengan arah perubahan sosial. Hukum memiliki peran sebagai pengatur (interaksi kodrati/organis), pengawas (saat terjadi perubahan sosial), dan penyelesaian masalah (saat terjadi masalah berat).</p>
-
-                        <h4 class="mt-4 text-secondary">A. Sifat dan Hakikat Sosiologi</h4>
-                        <ol class="list-group list-group-numbered mb-3">
-                            <li class="list-group-item">Termasuk <strong>ilmu-ilmu sosial</strong>, bukan ilmu alam atau humaniora.</li>
-                            <li class="list-group-item">Bersifat <strong>Kategoris</strong>: Membatasi diri pada apa yang terjadi, bukan apa yang seharusnya terjadi.</li>
-                            <li class="list-group-item">Ilmu pengetahuan <strong>Murni (Pure Science)</strong>: Bertujuan mengembangkan ilmu secara abstrak, bukan terapan (applied science).</li>
-                            <li class="list-group-item">Bersifat <strong>Abstrak / Teoretis</strong>: Menyusun abstraksi dari hasil observasi untuk menjelaskan sebab-akibat.</li>
-                            <li class="list-group-item">Bertujuan menghasilkan <strong>pengertian dan pola-pola umum</strong>.</li>
-                            <li class="list-group-item">Ilmu pengetahuan yang <strong>Rasional</strong> dan menggunakan metode terukur.</li>
-                            <li class="list-group-item">Termasuk <strong>ilmu pengetahuan Umum</strong>: Mempelajari gejala umum dalam setiap interaksi secara empiris.</li>
-                        </ol>
-
-                        <h4 class="mt-4 text-secondary">B. Fungsi Sosiologi</h4>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="p-3 border rounded border-start border-primary border-4 bg-light h-100">
-                                    <h5 class="fw-bold">1) Sosiolog sebagai Profesi</h5>
-                                    <ul>
-                                        <li><strong>Guru/Pendidik:</strong> Mengajar tidak menggurui, memahami kondisi peserta didik, dan mencetak siswa yang mengamalkan ilmunya.</li>
-                                        <li><strong>Peneliti Handal:</strong> Mengumpulkan data, menganalisis, menjernihkan anggapan keliru dengan prinsip kehati-hatian.</li>
-                                        <li><strong>Mediator:</strong> Menyelesaikan masalah hubungan masyarakat (misal: rembug pernikahan) dengan memahami adat istiadat.</li>
-                                        <li><strong>Penengah Konflik:</strong> Mengatasi konflik karena paham peta konflik dan manajemen resolusi (misal: sengketa tanah).</li>
-                                        <li><strong>Agen Perubahan:</strong> Membantu masyarakat menerima perubahan dengan baik (misal: sosialisasi konversi gas elpiji).</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="p-3 border rounded border-start border-success border-4 bg-light h-100">
-                                    <h5 class="fw-bold">2) Sosiologi sebagai Ilmu Pengetahuan</h5>
-                                    <ul>
-                                        <li><strong>Perencanaan Sosial:</strong> Mempersiapkan masa depan dan meminimumkan ekses pembangunan. Menjadikan manusia sebagai subjek. Sosiologi paham kebudayaan faktual masyarakat.</li>
-                                        <li><strong>Perencanaan Pembangunan:</strong> Meningkatkan kesejahteraan secara terencana dalam 3 tahap:
-                                            <ul class="mt-2">
-                                                <li><em>Tahap Perencanaan:</em> Mengidentifikasi kebutuhan dan pusat kekuasaan.</li>
-                                                <li><em>Tahap Pelaksanaan:</em> Mengamati perubahan dan kekuatan sosial.</li>
-                                                <li><em>Tahap Evaluasi:</em> Menganalisis efek pembangunan (pengadaan, pembetulan, peningkatan).</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-pg" role="tabpanel">
-            
-            <div class="p-3 mb-4 rounded border sticky-score-bar d-flex justify-content-between align-items-center">
-                <div>
-                    <h5 class="mb-0 fw-bold"><i class="fa-solid fa-chart-line me-2"></i>Status Nilai Pilihan Ganda</h5>
-                    <small class="text-muted" id="answered-count">Terjawab: 0 / 35 Soal</small>
-                </div>
-                <div>
-                    <span class="fs-4 fw-bold text-primary" id="score-display">0 / 100</span>
-                    <button class="btn btn-primary btn-sm ms-3" onclick="submitPG()"><i class="fa-solid fa-paper-plane me-1"></i> Submit & Cek Hasil</button>
-                </div>
-            </div>
-
-            <form id="quizForm">
-                <div id="pgContainer"></div>
-            </form>
-            
-            <div class="text-center my-4">
-                <button class="btn btn-success btn-lg px-5" onclick="submitPG()"><i class="fa-solid fa-check-double me-2"></i> Periksa Hasil PG</button>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-esai" role="tabpanel">
-            <div class="card card-custom p-4 mb-4">
-                <div class="d-md-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-                    <div>
-                        <h3 class="fw-bold text-primary mb-1"><i class="fa-solid fa-pen-nib me-2"></i>15 Soal Esai Sosiologi</h3>
-                        <p class="text-muted mb-0">Tuliskan jawaban Anda terlebih dahulu pada kolom yang disediakan.</p>
-                    </div>
-                    <div class="mt-3 mt-md-0">
-                        <div class="input-group">
-                            <input type="password" id="teacherPass" class="form-control" placeholder="Password Guru">
-                            <button class="btn btn-warning fw-bold" onclick="unlockEssay()"><i class="fa-solid fa-key me-1"></i> Buka Kunci Jawaban</button>
-                        </div>
-                        <small class="text-muted d-block mt-1 text-end">Hint: <code>guru123</code> atau <code>sosiologi2026</code></small>
-                    </div>
-                </div>
-
-                <div id="essayContainer"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<header class="hero"><div class="wrap hero-inner">
+  <div><div class="eyebrow">Ruang belajar · Sosiologi kelas X</div><h1>Membaca pola,<br>memahami manusia.</h1>
+    <p>Kenali kehidupan sosial dari dekat: diri, kelompok, keberagaman, hingga cara menelitinya.</p>
+    <div class="hero-tags"><span class="tag">4 bab inti</span><span class="tag">200 pilihan ganda</span><span class="tag">80 esai</span></div>
+  </div>
+  <svg class="hero-art" viewBox="0 0 260 230" role="img" aria-label="Ilustrasi jejaring sosial"><circle cx="130" cy="111" r="76" fill="#ffffff18"/><path d="M63 89 110 54l68 19 35 61-48 53-73-9-39-48z" fill="none" stroke="#c0ead0" stroke-width="3" stroke-dasharray="5 7"/><path d="M70 133 110 54m0 0 68 19m0 0 35 61m0 0-83-8m83 8-48 53m0 0-73-9m0 0-39-45m39 45 35-52" stroke="#bce8ca" stroke-width="2"/><circle cx="110" cy="54" r="16" fill="#f4ca68"/><circle cx="178" cy="73" r="14" fill="#ed7658"/><circle cx="213" cy="134" r="17" fill="#70b3ae"/><circle cx="165" cy="187" r="15" fill="#f4ca68"/><circle cx="92" cy="178" r="18" fill="#ed7658"/><circle cx="53" cy="133" r="14" fill="#70b3ae"/><circle cx="130" cy="126" r="22" fill="#f8fff5"/><path d="M119 129c5-13 19-13 23-4 4 10-9 20-12 22-3-2-17-10-11-18z" fill="#34785e"/></svg>
+</div></header>
+<div class="topbar"><nav class="wrap navrow" aria-label="Navigasi bab"><span class="brand">◉ Ruang Sosiologi</span><button class="active" data-nav="0">Beranda</button><button data-nav="1">Bab 1</button><button data-nav="2">Bab 2</button><button data-nav="3">Bab 3</button><button data-nav="4">Bab 4</button><span class="progress-mini" id="overallProgress">Progres belajar: 0%</span></nav></div>
+<main class="wrap" id="app">
+<section class="intro-grid" id="home">
+  <div class="card welcome"><h2>Belajar dengan rasa ingin tahu</h2><p>Materi ini mengikuti peta isi dan kompetensi pada foto yang Anda unggah. Baca konsep, amati contoh, lalu uji pemahaman dengan latihan.</p>
+    <div class="stats"><div class="stat"><strong>4</strong><span>bab materi</span></div><div class="stat"><strong>50</strong><span>PG per bab</span></div><div class="stat"><strong>20</strong><span>esai per bab</span></div></div>
+  </div>
+  <div class="card notice"><strong>Catatan belajar</strong><p>Contoh di sini adalah ilustrasi untuk latihan berpikir sosiologis, bukan gambaran semua orang atau kelompok. Saat membahas masyarakat, gunakan data dan hindari memberi cap kepada individu.</p></div>
+</section>
+<div id="chapters"></div>
+</main>
+<footer class="footer"><div class="wrap"><h3>Ruang Sosiologi</h3><p>Materi belajar mandiri yang disusun berdasarkan cakupan bab dan kompetensi pada foto yang diunggah.</p><p>Untuk pembelajaran kelas, sesuaikan contoh lokal dan pendalaman konsep dengan arahan guru serta buku ajar yang digunakan.</p><div class="source-list"><a href="https://kurikulum.kemdikbud.go.id/file/cp/dasmen/23.%20CP%20Sosiologi.pdf" target="_blank" rel="noopener">Capaian Pembelajaran Sosiologi · BSKAP</a><a href="https://repositori.kemendikdasmen.go.id/19529/" target="_blank" rel="noopener">E-modul Fungsi Sosiologi · Kemendikbud</a><a href="https://repositori.kemendikdasmen.go.id/19530/" target="_blank" rel="noopener">E-modul Interaksi Sosial · Kemendikbud</a><a href="https://repositori.kemendikdasmen.go.id/21962/" target="_blank" rel="noopener">Modul Nilai dan Norma · Kemendikbud</a><a href="https://repositori.kemendikdasmen.go.id/21958/" target="_blank" rel="noopener">Modul Metode Penelitian Sosial · Kemendikbud</a></div><p style="margin-top:16px">Situs ini berjalan mandiri di browser dan menyimpan progres latihan di perangkat Anda.</p></div></footer>
 <script>
-    // Data Soal Pilihan Ganda (35 Soal)
-    const pgData = [
-        { q: "Sosiologi merupakan ilmu pengetahuan yang relatif muda. Kelahiran sosiologi secara resmi ditandai oleh terbitnya karya Auguste Comte yang berjudul ....", o: ["Sociological Imagination", "Positive Philosophy", "The Social Fact", "Rules of Sociological Method"], a: 1, c: "★ Soal #1 (Sejarah Sosiologi)", e: "Auguste Comte menerbitkan 'Positive Philosophy' (1838)." },
-        { q: "Revolusi Industri di Inggris memicu lahirnya sosiologi karena timbulnya permasalahan sosial berupa ....", o: ["Pemerintahan absolutisme", "Kesenjangan ekonomi antara pusat industri dan daerah", "Penyerbuan Penjara Bastile", "Sistem pemerintahan teokrasi"], a: 1, c: "★ Soal #2 (Latar Belakang Industri)", e: "Industrialisasi di Inggris menyebabkan ketimpangan ekonomi." },
-        { q: "Secara etimologi, kata 'Sosiologi' berasal dari kata 'Socius' dan 'Logos'. Arti dari kata 'Socius' adalah ....", o: ["Ilmu", "Masyarakat", "Kawan / Teman", "Berbicara"], a: 2, c: "★ Soal #3 (Etimologi)", e: "Socius (Latin) berarti kawan/teman." },
-        { q: "Tokoh sosiologi yang mendefinisikan sosiologi sebagai ilmu yang mempelajari tindakan sosial (social action) adalah ....", o: ["Auguste Comte", "Émile Durkheim", "Max Weber", "Karl Marx"], a: 2, c: "★ Soal #4 (Definisi Ahli)", e: "Max Weber memfokuskan sosiologi pada tindakan sosial." },
-        { q: "Menurut Émile Durkheim, fakta sosial memiliki sifat eksternal, umum, dan memaksa. Contoh fakta sosial adalah ....", o: ["Perkawinan", "Gaya busana", "Hobi pribadi", "Opini individu"], a: 0, c: "★ Soal #5 (Fakta Sosial)", e: "Perkawinan adalah aturan di luar individu yang bersifat memaksa." },
-        { q: "Objek formal utama dari disiplin ilmu Sosiologi adalah ....", o: ["Kebudayaan", "Proses metabolisme", "Hubungan antarmanusia dan proses interaksinya", "Sistem pemerintahan"], a: 2, c: "★ Soal #6 (Objek Formal)", e: "Sosiologi menekankan pada hubungan/interaksi antarmanusia." },
-        { q: "Faktor psikologis yang bekerja saat seseorang ikut menyumbang korban karena merasakan berada di posisi korban disebut ....", o: ["Sugesti", "Imitasi", "Empati", "Identifikasi"], a: 2, c: "★ Soal #7 (Faktor Interaksi)", e: "Empati melibatkan penempatan diri pada posisi orang lain." },
-        { q: "Dorongan dalam diri individu yang memicu semangat mencapai tujuan tanpa iming-iming eksternal disebut ....", o: ["Motivasi Intrinsik", "Motivasi Ekstrinsik", "Sugesti", "Konformitas"], a: 0, c: "★ Soal #8 (Motivasi)", e: "Berasal dari dalam kesadaran pribadi." },
-        { q: "Norma sosial di masyarakat diciptakan dengan tujuan utama untuk ....", o: ["Membatasi hak asasi", "Menciptakan ketertiban", "Kekuasaan kelompok", "Menghukum orang lemah"], a: 1, c: "★ Soal #9 (Fungsi Norma)", e: "Fungsinya menjaga keteraturan dan keharmonisan." },
-        { q: "Sikap mementingkan diri sendiri dan tidak peduli terhadap gotong royong disebut ....", o: ["Solidaritas", "Individualisme", "Interaksi positif", "Toleransi"], a: 1, c: "★ Soal #10 (Individualisme)", e: "Mengutamakan diri sendiri di atas kelompok." },
-        
-        // --- 15 Soal Lanjutan (Campuran dari yang sebelumnya) ---
-        { q: "Pusat kajian khusus atau sudut pandang spesifik dari ilmu pengetahuan disebut ....", o: ["Objek Material", "Objek Formal", "Objek Empiris", "Objek Praktis"], a: 1, c: "★ Soal #11 (Objek Sosiologi)", e: "Objek formal adalah fokus/sudut pandang suatu ilmu." },
-        { q: "Proses penerimaan pandangan dari tokoh terkemuka tanpa dikritisi disebut ....", o: ["Motivasi", "Sugesti", "Identifikasi", "Empati"], a: 1, c: "★ Soal #12 (Sugesti)", e: "Pengaruh diterima secara langsung tanpa pemikiran kritis." },
-        { q: "Seorang anak yang ingin sama persis secara mendalam (nilai, sikap) dengan idolanya mengalami ....", o: ["Imitasi", "Simpati", "Identifikasi", "Motivasi"], a: 2, c: "★ Soal #13 (Identifikasi)", e: "Identifikasi melekat secara mendalam, bukan sekadar fisik." },
-        { q: "Seorang siswa berbohong mengaku macet agar tidak dimarahi, tindakan membenarkan diri ini disebut ....", o: ["Rasionalisasi", "Sublimasi", "Empati", "Sugesti"], a: 0, c: "★ Soal #14 (Rasionalisasi)", e: "Rasionalisasi adalah mencari pembenaran atas kesalahan." },
-        { q: "Internalisasi nilai sosial berarti individu mematuhi aturan karena ....", o: ["Takut dihukum", "Pengawasan", "Kesadaran moral", "Mengharapkan pujian"], a: 2, c: "★ Soal #15 (Internalisasi)", e: "Nilai sudah menyatu menjadi kesadaran dalam diri." },
-        { q: "Kepatuhan semu terjadi ketika ....", o: ["Aturan dipatuhi hanya jika ada pengawasan", "Individu sadar hukum", "Terjadi solidaritas", "Norma hilang"], a: 0, c: "★ Soal #16 (Kepatuhan Semu)", e: "Mematuhi hanya karena kontrol luar/takut sanksi." },
-        { q: "Menyebarkan hoaks merusak norma sosial berupa ....", o: ["Kejujuran dan tanggung jawab", "Toleransi", "Empati", "Imitasi"], a: 0, c: "★ Soal #17 (Norma)", e: "Hoaks melanggar integritas dan kejujuran." },
-        { q: "Sikap terbuka dan menghargai perbedaan opini disebut ....", o: ["Sugesti", "Toleransi", "Egoisme", "Identifikasi"], a: 1, c: "★ Soal #18 (Toleransi)", e: "Toleransi adalah saling menghargai pandangan." },
-        { q: "Perkembangan sosiologi di Amerika berfokus pada ....", o: ["Teori dan metodologi di universitas", "Revolusi industri", "Kritik teokrasi", "Masalah pertanian"], a: 0, c: "★ Soal #19 (Sejarah)", e: "Di Amerika, sosiologi dikembangkan secara akademik." },
-        { q: "Sosiologi di Eropa (social problem solving) mengarah pada ....", o: ["Sosiologi murni", "Sosiologi terapan", "Psikologi", "Antropologi"], a: 1, c: "★ Soal #20 (Sejarah)", e: "Digunakan untuk mencari jalan keluar (terapan)." },
-        { q: "Jurusan Sosiologi pertama di Indonesia didirikan di ....", o: ["UI", "UNPAD", "UGM", "UNAIR"], a: 2, c: "★ Soal #21 (Sejarah Indo)", e: "Di UGM pada tanggal 7 September 1955." },
-        { q: "Manusia dan masyarakat yang juga dipelajari oleh Antropologi berkedudukan sebagai ....", o: ["Objek Formal", "Objek Material", "Subjek", "Teori"], a: 1, c: "★ Soal #22 (Objek)", e: "Objek material adalah substansi kajian yang sifatnya umum." },
-        { q: "Penjara Bastile di Prancis menjadi simbol perlawanan terhadap ....", o: ["Demokrasi", "Fasisme", "Kediktatoran dan teokrasi", "Industri"], a: 2, c: "★ Soal #23 (Sejarah Prancis)", e: "Simbol perlawanan kediktatoran Louis XIV." },
-        { q: "Sugesti dari media massa membuktikan bahwa interaksi dapat terjadi melalui ....", o: ["Tatap muka saja", "Komunikasi tidak langsung (digital)", "Kontak fisik", "Identifikasi"], a: 1, c: "★ Soal #24 (Media & Interaksi)", e: "Media memfasilitasi pengaruh walau tanpa tatap muka." },
-        { q: "Sikap saling membantu korban bencana karena kasihan (tanpa aksi lebih jauh) disebut ....", o: ["Empati", "Identifikasi", "Simpati", "Sugesti"], a: 2, c: "★ Soal #25 (Simpati)", e: "Simpati berhenti pada perasaan kasihan." },
+const chapterData = [
+{title:"Fungsi Sosiologi dalam Mengkaji Berbagai Gejala Sosial",short:"Memahami sosiologi sebagai ilmu dan alat membaca pola kehidupan bersama.",icon:"🔎",tint:"#fbe8d9",goals:["Menjelaskan sosiologi sebagai ilmu yang mengkaji masyarakat dan hubungan sosial.","Mengenali ciri pengetahuan sosiologis: empiris, teoretis, kumulatif, dan nonetis.","Menghubungkan fungsi sosiologi dengan pengenalan gejala sosial dan upaya sosial."],lessons:[
+{title:"1. Apa yang dipelajari sosiologi?",body:"Sosiologi mempelajari kehidupan bersama manusia: hubungan antarmanusia, kelompok, lembaga, aturan, pola interaksi, dan perubahan yang terbentuk di dalam masyarakat. Fokusnya bukan menilai watak seseorang, melainkan memahami pola yang muncul ketika orang hidup saling berhubungan.",example:"Jika beberapa siswa terlambat, kita tidak langsung menyimpulkan mereka malas. Sosiologi mengajak kita memeriksa pola: jadwal angkutan, jarak rumah, aturan gerbang, dan kebiasaan kelas. Penjelasan sosial mempertimbangkan hubungan antara pengalaman pribadi dan keadaan sekitar."},
+{title:"2. Sosiologi sebagai ilmu pengetahuan",body:"Pengetahuan ilmiah dibangun secara sistematis dengan konsep, cara kerja yang dapat dijelaskan, bukti, dan penalaran. Empat ciri yang umum dipelajari di kelas X adalah empiris, teoretis, kumulatif, dan nonetis.",bullets:["Empiris: berangkat dari pengamatan dan fakta yang dapat diperiksa, bukan dugaan semata.","Teoretis: menyusun konsep dan penjelasan untuk menerangkan hubungan atau pola yang ditemukan.","Kumulatif: penjelasan baru mengembangkan, memperbaiki, atau menguji pengetahuan sebelumnya.","Nonetis: menjelaskan gejala secara analitis tanpa memberi vonis moral kepada kelompok yang diteliti. Ini tidak berarti peneliti boleh mengabaikan etika penelitian."],example:"Pernyataan “remaja sekarang tidak sopan” adalah penilaian yang terlalu luas. Penelitian sosiologis akan memperjelas perilaku yang diamati, siapa yang terlibat, di situasi apa, lalu mengumpulkan bukti sebelum menyusun penjelasan."},
+{title:"3. Objek kajian dan gejala sosial",body:"Masyarakat dan hubungan sosial menjadi objek material kajian sosiologi. Sudut pandangnya (objek formal) menyoroti pola hubungan, proses sosial, struktur, lembaga, serta perubahan. Gejala sosial ialah peristiwa atau pola yang berkaitan dengan kehidupan bersama dan dapat berpengaruh pada banyak orang.",bullets:["Gejala sosial dapat tampak sebagai kerja sama, perubahan kebiasaan, urbanisasi, ketimpangan akses, pengangguran, atau konflik.","Gejala sosial tidak otomatis berarti masalah. Ada gejala yang membuka peluang, seperti gerakan gotong royong atau tumbuhnya komunitas belajar.","Satu gejala biasanya memiliki lebih dari satu penyebab dan dampak; konteks waktu serta tempat perlu diperhatikan."],example:"Munculnya perpustakaan warga merupakan gejala sosial karena dibangun melalui kerja sama dan memengaruhi akses belajar komunitas. Peneliti dapat mengkaji siapa yang mengelola, siapa yang menggunakan, dan bagaimana kegiatan itu bertahan."},
+{title:"4. Fungsi sosiologi dalam kehidupan",body:"Sosiologi membantu masyarakat mengenali persoalan berdasarkan data, merancang tindakan yang sesuai kebutuhan, memahami dampak perubahan, dan mengevaluasi program. Sosiolog dapat memberi gambaran dan rekomendasi; keputusan kebijakan tetap melibatkan pihak yang berwenang dan masyarakat terdampak.",bullets:["Penelitian sosial: menghasilkan informasi yang tertata tentang gejala dan kebutuhan warga.","Perencanaan sosial: membantu menentukan tujuan, sasaran, sumber daya, serta langkah program.","Pembangunan: memberi pemahaman tentang kelompok terdampak, partisipasi, dan dampak sosial suatu perubahan.","Pemecahan masalah: membantu mengurai penyebab dan menimbang pilihan tindakan berdasarkan bukti."],example:"Sebelum membuat ruang belajar sore, pengurus lingkungan dapat bertanya kepada keluarga tentang jam yang sesuai, akses, keamanan, dan kebutuhan pendamping. Hasilnya dipakai menyusun program yang lebih mungkin digunakan warga."},
+{title:"5. Cara berpikir sosiologis",body:"Berpikir sosiologis berarti melihat hubungan antara pengalaman individu dan konteks yang lebih luas. Mulailah dengan merumuskan pertanyaan yang jelas, mengamati pola, membandingkan pengalaman, memeriksa sumber, dan menyampaikan batas kesimpulan. Korelasi belum tentu membuktikan sebab-akibat.",bullets:["Bedakan fakta, tafsir, dan penilaian. Catat mana yang diamati dan mana yang masih dugaan.","Cari variasi pengalaman; jangan menyamakan seluruh anggota kelompok.","Kesimpulan harus sebanding dengan data. Survei kecil di satu kelas tidak otomatis mewakili semua pelajar."],example:"Ketika penggunaan gawai dan keterlambatan tampak bersamaan, perlu diperiksa faktor lain seperti jam tidur, jarak, jadwal keluarga, dan jenis perjalanan sebelum menyebut gawai sebagai penyebab."}],
+summary:["Sosiologi mengkaji pola hubungan dan kehidupan masyarakat.","Pengetahuan sosiologis dibangun dari bukti, konsep, dan penalaran yang sistematis.","Gejala sosial dipahami dalam konteks, bukan semata-mata melalui prasangka.","Fungsi sosiologi meliputi penelitian, perencanaan, pemahaman pembangunan, dan pemecahan masalah."],
+terms:[
+["Empiris","Pengetahuan sosiologis bertumpu pada pengamatan dan bukti yang dapat diperiksa.",["Tim siswa mencatat pola pemakaian taman selama satu minggu sebelum menyimpulkan fasilitas itu jarang digunakan.","Peneliti membandingkan catatan observasi dengan wawancara warga untuk memastikan gambaran yang diperoleh.","Alih-alih menebak alasan siswa absen, kelompok mengumpulkan data kehadiran dan melakukan tanya jawab.","Kesimpulan tentang antrean kantin dibuat setelah waktu tunggu diamati pada beberapa hari berbeda.","Laporan menyebutkan sumber data serta cara pengumpulannya agar pembaca dapat memeriksa dasar kesimpulan."]],
+["Teoretis","Konsep dan penalaran digunakan untuk menerangkan hubungan di antara fakta yang diamati.",["Setelah menemukan bahwa warga lebih aktif saat kegiatan melibatkan tetangga dekat, peneliti menyusun penjelasan tentang pentingnya ikatan sosial.","Data kehadiran kegiatan dihubungkan dengan akses dan jadwal untuk menerangkan pola partisipasi.","Peneliti memakai konsep peran sosial untuk menjelaskan pembagian tugas di dalam kelompok.","Dari beberapa kasus serupa, siswa menyusun penjelasan tentang hubungan aturan kelompok dan keteraturan.","Angka survei tidak dibiarkan sebagai daftar; siswa menjelaskan pola yang mungkin mendasarinya."]],
+["Kumulatif","Pengetahuan berkembang dengan menguji dan memperbaiki penjelasan terdahulu.",["Penelitian tahun ini mengulang pertanyaan survei tahun lalu lalu membandingkan hasilnya.","Siswa membaca temuan penelitian sebelumnya sebelum menyusun pertanyaan lanjutan.","Temuan baru menunjukkan penjelasan awal perlu diperbaiki karena pengalaman kelompok yang diwawancarai berbeda.","Kelas lain menguji apakah pola yang ditemukan di satu sekolah juga tampak di lingkungan berbeda.","Kajian baru menambahkan data terbaru untuk memperbarui pemahaman tentang kebiasaan warga."]],
+["Nonetis","Kajian menjelaskan gejala sosial tanpa menghakimi orang atau kelompok sebagai baik dan buruk.",["Peneliti menggambarkan alasan warga melanggar jadwal buang sampah sebelum membahas dampaknya.","Laporan memakai data perilaku, bukan sebutan merendahkan untuk kelompok tertentu.","Siswa meneliti perilaku membolos dengan menanyakan konteks dan pola, bukan langsung memberi cap pemalas.","Analisis membedakan penjelasan tentang sebab perilaku dari penilaian moral terhadap pelakunya.","Peneliti menyampaikan fakta secara berimbang sambil tetap melindungi hak dan martabat informan."]],
+["Objek formal","Sudut pandang sosiologi menelaah pola hubungan, proses, struktur, dan perubahan sosial.",["Fenomena antrean dikaji melalui aturan, interaksi, serta kebiasaan warga yang terbentuk di sana.","Peneliti melihat bagaimana pembagian peran di keluarga berubah saat anggota keluarga berpindah pekerjaan.","Siswa memetakan hubungan antara kelompok belajar dan kebiasaan berbagi catatan.","Kajian menyoroti pola kerja sama antarkelompok warga dalam mengelola taman.","Perubahan pemakaian ruang publik dijelaskan dengan melihat norma dan interaksi penggunanya."]],
+["Gejala sosial","Peristiwa atau pola yang berkaitan dengan kehidupan bersama dan berdampak pada masyarakat.",["Warga dari beberapa RT bersama-sama mendirikan tempat baca untuk anak-anak.","Kebiasaan berbelanja warga berubah setelah pasar berpindah lokasi.","Semakin banyak pekerja muda tinggal jauh dari keluarga karena memperoleh pekerjaan di kota.","Kelompok warga menggalang bantuan setelah banjir mengganggu kegiatan harian.","Perbedaan akses internet membuat kesempatan mengikuti pembelajaran daring tidak sama."]],
+["Penelitian sosial","Pengumpulan dan analisis informasi secara sistematis untuk menjawab pertanyaan tentang masyarakat.",["Kelas ingin mengetahui alasan siswa memilih kegiatan ekstrakurikuler, lalu mewawancarai peserta dan pembina.","Tim mengamati pembagian tugas pada kerja bakti dengan panduan pengamatan yang sama.","Siswa memeriksa arsip kegiatan komunitas dan mencatat perubahan jumlah peserta.","Kelompok menanyakan pengalaman pengguna halte untuk mengetahui kebutuhan fasilitas.","Laporan menjelaskan pertanyaan, cara memperoleh data, temuan, serta keterbatasan kajian."]],
+["Perencanaan sosial","Informasi sosial dipakai untuk memilih sasaran dan langkah program yang sesuai kebutuhan warga.",["Sebelum menetapkan jam pos belajar, panitia menanyakan jadwal siswa dan relawan.","Data kebutuhan air bersih dipakai menentukan lokasi prioritas perbaikan.","Pengurus merancang kegiatan lansia setelah mendengar kebutuhan dan akses para peserta.","Sekolah menyesuaikan pendampingan setelah mengidentifikasi kelompok yang memerlukan dukungan belajar.","Warga menetapkan tujuan dan sumber daya program berdasarkan pemetaan kebutuhan lingkungan."]],
+["Pembangunan","Perubahan terencana perlu memahami kondisi sosial, partisipasi, serta dampaknya bagi kelompok berbeda.",["Pembangunan halte mempertimbangkan akses pengguna kursi roda dan jalur pejalan kaki.","Sebelum taman dibangun, warga sekitar dilibatkan untuk membahas ruang bermain dan area usaha kecil.","Evaluasi jalan baru juga menelaah perubahan akses pedagang dan pengguna angkutan umum.","Program digital memperhatikan warga yang memiliki perangkat dan koneksi terbatas.","Dampak pembangunan dinilai dari siapa yang memperoleh manfaat dan siapa yang menghadapi perubahan."]],
+["Pemecahan masalah sosial","Masalah diurai melalui penyebab, pihak terdampak, bukti, dan pilihan tindakan yang mungkin.",["Untuk mengurangi sampah di sungai, warga memeriksa kebiasaan pembuangan dan ketersediaan tempat sampah.","Sekolah mengkaji alasan konflik jadwal sebelum menyepakati aturan pemakaian lapangan.","Tim berdialog dengan kelompok terdampak sebelum menyusun langkah penanganan.","Program perbaikan kehadiran dievaluasi dari penyebab yang ditemukan, bukan hanya menambah hukuman.","Warga membandingkan beberapa solusi dan memilih tindakan yang didukung bukti serta bisa dijalankan."]]
+]},
+{title:"Individu, Kelompok, dan Hubungan Sosial",short:"Menjelajahi identitas, interaksi, nilai, norma, sosialisasi, dan keteraturan sosial.",icon:"🧩",tint:"#e4edf9",goals:["Membedakan identitas diri, status, dan peran sosial.","Menguraikan terbentuknya interaksi dan kelompok sosial.","Menjelaskan nilai, norma, agen sosialisasi, pengendalian sosial, dan keteraturan."],lessons:[
+{title:"1. Individu dan identitas sosial",body:"Setiap orang adalah individu yang unik sekaligus makhluk sosial. Identitas diri berkembang melalui pengalaman dan hubungan dengan orang lain. Sebagian identitas berkaitan dengan pilihan pribadi; sebagian terbentuk melalui keanggotaan, lingkungan, bahasa, budaya, dan pengalaman sosial. Identitas dapat berlapis dan berubah sepanjang kehidupan.",example:"Seseorang dapat menjadi anak, kakak, siswa, anggota klub musik, dan warga kampung sekaligus. Tiap lingkungan mengenali sisi dirinya yang berbeda; tidak satu label pun menjelaskan seluruh dirinya."},
+{title:"2. Status dan peran",body:"Status adalah posisi seseorang dalam hubungan sosial; peran adalah perilaku dan tanggung jawab yang diharapkan terkait posisi tersebut. Status dapat diperoleh sejak lahir atau dicapai melalui usaha, dan seseorang biasanya memegang beberapa status sekaligus. Harapan peran bisa berbeda menurut situasi.",bullets:["Contoh status: siswa, ketua kelas, anggota keluarga, anggota tim.","Contoh peran: belajar dan mengikuti kesepakatan kelas sebagai siswa; mengoordinasi tugas sebagai ketua.","Konflik peran terjadi ketika tuntutan dua peran sulit dipenuhi pada waktu bersamaan; komunikasi dan prioritas membantu mengelolanya."],example:"Ketua kelas yang juga atlet mungkin harus mengatur waktu antara latihan dan rapat kelas. Ia dapat membagi tugas, menyepakati jadwal, serta berkomunikasi dengan teman."},
+{title:"3. Kelompok sosial dan interaksi",body:"Kelompok sosial terbentuk melalui hubungan dan rasa menjadi bagian dari suatu kebersamaan. Kelompok primer biasanya memiliki hubungan akrab dan personal, misalnya keluarga dekat. Kelompok sekunder cenderung dibentuk untuk tujuan tertentu dengan hubungan lebih formal, seperti panitia kegiatan. Bentuk kelompok bergantung konteks.",bullets:["Interaksi sosial memerlukan kontak sosial dan komunikasi. Kontak dapat berlangsung langsung atau melalui media.","Proses asosiatif mencakup kerja sama, akomodasi, asimilasi, dan akulturasi.","Proses disosiatif dapat berupa persaingan, kontravensi, dan konflik. Proses ini tidak selalu berakhir dengan kerusakan; penyelesaian yang adil dapat memulihkan hubungan."],example:"Dua kelompok siswa yang berebut jadwal aula sedang berkompetisi. Mereka bermusyawarah dan menyepakati giliran penggunaan; kesepakatan itu merupakan akomodasi."},
+{title:"4. Nilai, norma, dan keteraturan",body:"Nilai sosial adalah anggapan bersama tentang hal yang dianggap penting, baik, pantas, atau diharapkan. Norma merupakan pedoman perilaku yang lebih konkret dan disertai tanggapan atau sanksi sosial. Norma memberi arah bagi interaksi, tetapi dapat berbeda antara lingkungan dan berubah seiring waktu.",bullets:["Nilai menghargai kebersihan dapat diwujudkan dalam norma membuang sampah pada tempatnya.","Norma dapat bersifat kebiasaan sehari-hari, tata kelakuan, adat, atau aturan resmi dengan daya ikat berbeda.","Keteraturan sosial terbentuk ketika pola interaksi dapat diperkirakan karena aturan dipahami dan dipatuhi; keteraturan yang sehat juga memungkinkan dialog dan perbaikan aturan."],example:"Komunitas yang menghargai keselamatan menetapkan norma memakai helm saat berkendara. Pengingat, pendidikan, dan aturan resmi dapat saling mendukung kepatuhan."},
+{title:"5. Sosialisasi dan agen-agen sosial",body:"Sosialisasi ialah proses seseorang mempelajari nilai, norma, pengetahuan, dan peran agar dapat berpartisipasi dalam kehidupan sosial. Proses berlangsung sepanjang hayat, melalui interaksi dan pengamatan. Agen sosialisasi antara lain keluarga, sekolah, teman sebaya, media massa, komunitas, dan lembaga keagamaan.",bullets:["Keluarga memberi pengalaman awal tentang bahasa, kebiasaan, rasa aman, dan tanggung jawab.","Sekolah mengenalkan pengetahuan, aturan bersama, kerja tim, serta peran sebagai warga sekolah.","Teman sebaya memberi ruang mencoba identitas, belajar kerja sama, dan bernegosiasi.","Media menyebarkan informasi serta model perilaku; pesan perlu dinilai secara kritis.","Agen dapat mengajarkan harapan yang berbeda; individu dapat berdialog dan menimbang nilai yang sesuai."],example:"Siswa belajar antre dari pengingat guru, melihat contoh teman, dan memahami alasan aturan itu menjaga keadilan. Perpaduan contoh, penjelasan, dan pengalaman membantu internalisasi."},
+{title:"6. Pengendalian sosial",body:"Pengendalian sosial adalah cara masyarakat mendorong perilaku sesuai norma dan menangani pelanggaran agar hubungan dapat berjalan. Bentuknya dapat preventif (mencegah), represif atau korektif (menangani setelah terjadi), formal (melalui aturan resmi), maupun informal (melalui kebiasaan dan teguran).",bullets:["Pengendalian yang mendidik menjelaskan aturan, memberi kesempatan memperbaiki tindakan, dan menerapkan konsekuensi secara konsisten.","Sanksi sebaiknya proporsional, tidak merendahkan martabat, dan sesuai aturan yang diketahui.","Dialog, mediasi, keteladanan, penghargaan, dan aturan tertulis dapat digunakan sesuai kebutuhan."],example:"Saat terjadi salah paham di kelompok, guru memfasilitasi tiap pihak menjelaskan kejadian, menyepakati pemulihan, lalu membuat aturan pembagian tugas yang lebih jelas."}],
+summary:["Identitas berkembang melalui pengalaman pribadi dan keanggotaan sosial.","Status adalah posisi; peran adalah harapan perilaku yang menyertainya.","Interaksi dibangun oleh kontak dan komunikasi serta dapat menghasilkan kerja sama maupun persaingan.","Nilai memberi orientasi umum; norma menjadi pedoman lebih konkret.","Sosialisasi dan pengendalian sosial membantu membentuk keteraturan yang dapat diperbaiki."],
+terms:[
+["Interaksi sosial","Hubungan timbal balik yang terjadi ketika orang saling memberi respons melalui kontak dan komunikasi.",["Dua siswa bertukar pendapat dan menanggapi gagasan satu sama lain saat rapat.","Pedagang dan pembeli berkomunikasi melalui aplikasi untuk menyepakati pesanan.","Warga menanggapi usul tetangga dalam pertemuan lingkungan.","Guru memberi pertanyaan dan siswa meresponsnya dalam diskusi.","Anggota kelompok mengubah tindakannya setelah menerima pesan dari anggota lain."]],
+["Status sosial","Posisi seseorang di dalam struktur hubungan sosial.",["Di sekolah, Rani dikenal sebagai siswa kelas X sekaligus anggota klub sains.","Dalam tim, Bima mendapat posisi sebagai kapten yang dipilih anggota.","Di keluarganya, Sari adalah anak pertama dan juga seorang pelajar.","Pemilihan ketua kelas memberi seseorang posisi tertentu dalam kehidupan kelas.","Seseorang menjadi warga baru setelah pindah dan tercatat tinggal di lingkungan tersebut."]],
+["Peran sosial","Harapan perilaku dan tanggung jawab yang menyertai suatu status.",["Sebagai ketua kelompok, Dito mengoordinasi pembagian tugas dan menyampaikan hasil diskusi.","Seorang siswa mengikuti kesepakatan kelas dan menyelesaikan tugas belajarnya.","Anggota tim menjaga komunikasi dan hadir saat jadwal latihan yang disetujui.","Pengurus perpustakaan mencatat peminjaman buku sesuai tanggung jawabnya.","Kakak mendampingi adiknya belajar ketika keluarga menyepakati pembagian waktu."]],
+["Nilai sosial","Anggapan bersama tentang sesuatu yang dianggap penting, baik, pantas, atau diharapkan.",["Warga memandang saling membantu sebagai hal penting dalam kehidupan bertetangga.","Kelas menghargai kejujuran sehingga siswa mengembalikan barang yang bukan miliknya.","Komunitas menganggap keselamatan pengguna jalan sebagai prioritas bersama.","Keluarga memandang menghormati orang lain sebagai pedoman bertindak.","Siswa menyepakati bahwa tanggung jawab merupakan sifat penting bagi anggota kelompok."]],
+["Norma sosial","Pedoman perilaku yang mengatur tindakan dan disertai tanggapan atau sanksi sosial.",["Pengunjung perpustakaan diminta berbicara pelan dan mengembalikan buku tepat waktu.","Warga mengikuti jadwal ronda yang telah disepakati bersama.","Sekolah menetapkan aturan tertulis tentang penggunaan laboratorium.","Di lingkungan tertentu, tamu memberi salam sebelum memasuki rumah sebagai kebiasaan bersama.","Pelanggar kesepakatan kerja kelompok diminta menyelesaikan bagian tugas yang tertunda."]],
+["Sosialisasi","Proses belajar nilai, norma, pengetahuan, dan peran melalui hubungan sosial.",["Anak mengamati orang dewasa mengucapkan terima kasih lalu ikut memakai kebiasaan itu.","Siswa baru mempelajari cara meminjam buku dari penjelasan pustakawan dan praktik langsung.","Remaja belajar kerja sama saat bergabung dalam tim olahraga.","Anggota komunitas mempelajari tradisi lingkungan melalui cerita dan keikutsertaan dalam kegiatan.","Orang dewasa menyesuaikan diri dengan aturan baru di tempat kerja."]],
+["Kelompok primer","Kelompok dengan hubungan dekat, akrab, personal, dan berlangsung relatif lama.",["Anggota keluarga berbagi cerita dan saling memberi dukungan dalam keseharian.","Sekelompok sahabat dekat saling mengenal pengalaman dan kebiasaan masing-masing.","Tetangga yang telah lama berhubungan rutin saling membantu saat dibutuhkan.","Teman kecil yang tumbuh bersama memiliki hubungan personal di luar kegiatan resmi.","Anggota kelompok kecil bertemu untuk saling mendukung, bukan hanya menyelesaikan tugas formal."]],
+["Kerja sama","Usaha bersama untuk mencapai tujuan yang disepakati.",["Warga membagi tugas menanam, menyiram, dan menjaga kebun bersama.","Anggota kelas mengumpulkan bahan lalu membuat majalah dinding secara kolaboratif.","Dua organisasi menyelenggarakan kegiatan donor buku dengan pembagian tanggung jawab.","Tim sepak bola menyusun strategi dan saling membantu mencapai tujuan pertandingan.","Relawan serta petugas setempat bekerja bersama menyalurkan bantuan."]],
+["Akomodasi","Proses penyesuaian atau penyelesaian perbedaan agar hubungan kembali dapat berlangsung.",["Dua kelompok menyepakati jadwal aula secara bergiliran setelah bermusyawarah.","Pihak yang berselisih meminta mediator membantu menemukan kesepakatan.","Warga membuat aturan pembagian penggunaan lapangan untuk mencegah pertengkaran.","Dua siswa menyusun ulang pembagian tugas setelah memahami keberatan masing-masing.","Kelompok yang berbeda pendapat menerima kesepakatan sementara untuk menjaga kegiatan tetap berjalan."]],
+["Pengendalian sosial","Upaya mendorong kepatuhan pada norma dan menangani pelanggaran untuk menjaga hubungan sosial.",["Sekolah mengingatkan aturan keselamatan sebelum kegiatan laboratorium dimulai.","Setelah terjadi perundungan, sekolah menindaklanjuti laporan, melindungi korban, dan melakukan pembinaan.","Pengurus mengajak warga menaati jadwal kebersihan melalui pengumuman dan teladan.","Pelanggaran aturan antre ditangani dengan teguran yang proporsional dan penjelasan alasannya.","Komunitas meninjau aturan yang tidak lagi sesuai lalu menyepakati pembaruan."]]
+]},
+{title:"Ragam Gejala Sosial di Masyarakat",short:"Mengenali keragaman, perbedaan, ketimpangan, dan sikap menghargai.",icon:"🌈",tint:"#f5e3ef",goals:["Menjelaskan gejala sosial dan ragam bentuknya.","Menganalisis perbedaan sosial, identitas multidimensi, dan heterogenitas.","Mengembangkan penghormatan, empati, dan sikap inklusif dalam masyarakat beragam."],lessons:[
+{title:"1. Ragam gejala sosial",body:"Gejala sosial muncul dari hubungan dan kondisi sosial, seperti pola pendidikan, pekerjaan, perpindahan penduduk, penggunaan teknologi, perubahan keluarga, kerja sama, atau konflik. Memahami gejala memerlukan konteks, bukti, dan perhatian terhadap siapa yang mengalami dampaknya.",example:"Peralihan layanan administrasi ke aplikasi dapat memudahkan sebagian warga, tetapi menyulitkan orang yang tidak memiliki perangkat atau koneksi. Satu perubahan sosial dapat membawa manfaat dan hambatan yang tidak terbagi merata."},
+{title:"2. Perbedaan sosial dan ketimpangan",body:"Perbedaan sosial menunjukkan variasi identitas atau cara hidup, misalnya bahasa, usia, pekerjaan, agama, kebiasaan, atau minat. Perbedaan tidak otomatis berarti adanya tingkatan. Ketimpangan terjadi ketika akses terhadap sumber daya, kesempatan, pengaruh, atau layanan tidak setara secara berpola.",bullets:["Perbedaan horizontal: keragaman yang tidak dengan sendirinya menempatkan satu kelompok lebih tinggi, misalnya variasi bahasa atau pekerjaan.","Stratifikasi sosial: susunan berlapis ketika sumber daya, prestise, atau kekuasaan tersebar tidak sama.","Mobilitas sosial: perubahan posisi sosial; kesempatan dan hambatannya dapat dikaji dengan melihat pendidikan, pekerjaan, jaringan, dan kebijakan."],example:"Dua warga yang menggunakan bahasa berbeda memiliki perbedaan budaya, bukan otomatis peringkat sosial. Jika salah satunya terus tidak mendapat layanan karena bahasanya, itu menunjukkan hambatan akses yang patut dikaji."},
+{title:"3. Identitas berlapis dan heterogenitas",body:"Identitas seseorang dibentuk oleh banyak dimensi yang saling berhubungan: umur, gender, bahasa, wilayah, agama, pendidikan, pekerjaan, disabilitas, kelas sosial, dan pengalaman. Heterogenitas berarti masyarakat terdiri atas warga dan kelompok yang beragam. Pengalaman tiap orang tidak dapat disimpulkan dari satu kategori saja.",example:"Dua siswa dari daerah yang sama bisa memiliki akses internet, bahasa keluarga, minat, dan pengalaman sekolah yang berbeda. Mengakui identitas berlapis mencegah kita membuat asumsi hanya dari asal daerah."},
+{title:"4. Stereotip, prasangka, dan diskriminasi",body:"Ketiganya berkaitan tetapi berbeda. Stereotip adalah generalisasi tentang kelompok; prasangka adalah sikap atau penilaian yang terbentuk sebelum mengenal individu; diskriminasi adalah perlakuan yang membatasi atau merugikan seseorang berdasarkan keanggotaan yang dilekatkan padanya.",bullets:["Stereotip: “semua anggota kelompok itu pasti …” mengabaikan variasi individu dan bukti.","Prasangka: menolak bekerja sama dengan seseorang karena anggapan awal tentang kelompoknya.","Diskriminasi: menolak layanan atau kesempatan secara tidak adil berdasarkan identitas.","Dampak dapat berupa rasa tidak aman, partisipasi terhambat, konflik, dan ketimpangan yang berulang."],example:"Jika panitia menolak peserta hanya karena cara bicaranya berbeda, tindakan itu membatasi kesempatan berdasarkan identitas yang diasumsikan. Panitia perlu menilai kriteria yang relevan secara adil."},
+{title:"5. Menghormati keberagaman sosial",body:"Sikap menghormati keberagaman berarti mengakui kesetaraan martabat, mendengarkan pengalaman yang beragam, dan memastikan aturan memberi kesempatan berpartisipasi. Toleransi tidak menuntut semua orang memiliki kebiasaan sama; empati mendorong kita memahami dampak aturan dan tindakan pada orang lain.",bullets:["Gunakan bahasa yang tidak merendahkan dan tanyakan kebutuhan tanpa berasumsi.","Buat ruang dialog yang aman agar perbedaan dapat dibicarakan dengan bukti dan saling menghormati.","Periksa apakah akses kegiatan, informasi, dan fasilitas tersedia bagi kelompok berbeda.","Tegur perlakuan diskriminatif dengan cara aman, berpihak pada perlindungan korban, dan mengikuti prosedur yang tepat."],example:"Kelompok kelas menyediakan ringkasan tertulis sekaligus penjelasan lisan agar lebih banyak siswa dapat mengikuti diskusi. Pengaturan ini mengakui perbedaan kebutuhan tanpa memberi label pada siswa."},
+{title:"6. Menganalisis gejala sosial",body:"Gunakan urutan sederhana: rumuskan gejala; tentukan ruang, waktu, dan pihak terdampak; pisahkan fakta dari anggapan; cari data dari beberapa sumber; lihat variasi pengalaman; lalu simpulkan dengan hati-hati. Rekomendasi perlu melibatkan pihak terkait dan mempertimbangkan dampak yang mungkin muncul.",example:"Untuk mengkaji rendahnya partisipasi kerja bakti, jangan berhenti pada label tidak peduli. Periksa waktu kegiatan, akses transportasi, informasi yang diterima, pembagian tugas, serta pendapat warga yang jarang hadir."}],
+summary:["Gejala sosial dapat berupa perubahan, kerja sama, keragaman, maupun masalah.","Perbedaan tidak sama dengan ketimpangan; lihat akses dan relasi kuasa.","Identitas seseorang berlapis dan pengalaman anggota kelompok beragam.","Stereotip, prasangka, dan diskriminasi merujuk pada hal berbeda.","Empati dan inklusi dapat diwujudkan melalui akses setara serta dialog yang aman."],
+terms:[
+["Heterogenitas sosial","Keadaan masyarakat yang tersusun dari warga dengan latar belakang dan pengalaman yang beragam.",["Satu kelas terdiri atas siswa dengan bahasa rumah, minat, dan daerah asal yang berbeda.","Warga lingkungan memiliki ragam pekerjaan, usia, dan tradisi keluarga.","Kelompok belajar beranggotakan siswa dengan pengalaman teknologi yang beragam.","Di pasar, pembeli dan pedagang memiliki kebiasaan serta kebutuhan yang tidak sama.","Komunitas kota dihuni orang dengan latar pendidikan dan pola hidup yang bervariasi."]],
+["Perbedaan sosial","Variasi identitas atau cara hidup yang tidak otomatis menunjukkan tingkatan lebih tinggi atau rendah.",["Dua tetangga memakai bahasa daerah berbeda tetapi sama-sama berhak menggunakan layanan umum.","Di antara siswa ada yang menyukai musik dan ada yang memilih olahraga tanpa urutan nilai sosial.","Pekerjaan warga bervariasi dan perbedaan itu sendiri tidak menentukan martabat mereka.","Seseorang menjalankan tradisi keluarga yang berbeda dari kebiasaan tetangganya.","Warga dari wilayah berbeda memiliki cara menyapa yang berlainan."]],
+["Stratifikasi sosial","Susunan masyarakat berlapis yang berkaitan dengan distribusi sumber daya, prestise, atau kekuasaan yang tidak sama.",["Akses ke sekolah berkualitas berbeda tajam menurut kemampuan membayar dan lokasi tempat tinggal.","Kelompok tertentu lebih mudah memengaruhi keputusan karena menguasai sumber daya penting.","Status pekerjaan memberi sebagian orang prestise dan kuasa lebih besar dalam lingkungan tertentu.","Peneliti memetakan lapisan pendapatan untuk melihat ketimpangan akses layanan.","Peluang memperoleh fasilitas publik terkonsentrasi pada wilayah dengan pengaruh politik lebih besar."]],
+["Identitas multidimensi","Identitas seseorang tersusun dari banyak dimensi yang berinteraksi dan berubah menurut konteks.",["Pengalaman seorang pelajar dipengaruhi sekaligus oleh bahasa keluarga, wilayah, minat, dan akses internet.","Teman sekelas dapat menjadi anak, anggota komunitas, atlet, dan siswa secara bersamaan.","Dua orang dengan agama sama tetap memiliki usia, pekerjaan, pengalaman, dan pandangan yang berbeda.","Pengalaman perempuan di desa tidak seragam karena pendidikan, pekerjaan, dan kondisi keluarga juga beragam.","Seseorang menampilkan sisi identitas berbeda di rumah, sekolah, atau komunitas."]],
+["Stereotip","Generalisasi yang dilekatkan kepada anggota kelompok tanpa memeriksa perbedaan individu.",["Seseorang berkata semua anak dari kota tertentu pasti tidak disiplin tanpa melihat perilaku masing-masing.","Panitia menganggap setiap siswa pendiam tidak mampu memimpin kegiatan.","Warga menyimpulkan semua orang muda tidak peduli hanya dari beberapa kejadian.","Sebuah kelompok dianggap selalu memiliki kebiasaan yang sama meskipun anggotanya beragam.","Penilai menganggap pekerjaan seseorang menentukan seluruh sifat pribadinya."]],
+["Prasangka","Sikap atau penilaian awal terhadap seseorang yang dibentuk sebelum mengenal dan memeriksa dirinya.",["Seorang siswa tidak mau duduk bersama teman baru karena mendengar rumor tentang daerah asalnya.","Pewawancara sejak awal meragukan pelamar hanya karena identitas yang diasumsikan.","Warga menolak berdialog dengan tetangga yang berbeda keyakinan meski belum mengenalnya.","Anggota tim curiga kepada siswa baru berdasarkan kabar yang belum diperiksa.","Seseorang merasa tidak nyaman berinteraksi karena penilaian yang diwarisi dari lingkungannya."]],
+["Diskriminasi","Perlakuan yang membatasi hak atau kesempatan seseorang secara tidak adil berdasarkan identitas kelompok.",["Pendaftar kegiatan ditolak hanya karena bahasa ibunya, padahal memenuhi semua persyaratan.","Akses ruang publik tidak disediakan bagi warga dengan kebutuhan mobilitas tertentu.","Siswa tidak diberi kesempatan memimpin hanya karena gendernya.","Pemilik layanan menolak pelanggan karena asal kelompok yang dilekatkan kepadanya.","Informasi penting sengaja tidak diberikan kepada sebagian warga berdasarkan identitas mereka."]],
+["Etnosentrisme","Kecenderungan menilai budaya lain dengan ukuran budaya sendiri dan menganggap budaya sendiri sebagai pusat.",["Seseorang menyebut kebiasaan daerah lain salah hanya karena berbeda dari tradisi keluarganya.","Kelompok menolak makanan budaya lain tanpa mau memahami makna dan konteksnya.","Warga menganggap bahasa sendiri lebih pantas digunakan semua orang di setiap keadaan.","Penilai menyebut tradisi lain terbelakang hanya karena tidak sama dengan yang ia kenal.","Satu komunitas memakai kebiasaannya sebagai satu-satunya ukuran untuk menilai kelompok lain."]],
+["Masyarakat multikultural","Masyarakat yang terdiri atas beragam latar budaya dan kelompok serta mengakui hidup bersama dalam perbedaan.",["Sekolah merayakan bahasa dan kesenian daerah sambil memberi ruang setara bagi seluruh siswa.","Kota menyelenggarakan dialog antarkomunitas untuk menyusun kegiatan bersama.","Warga mempertahankan tradisi masing-masing sambil menaati kesepakatan bersama.","Layanan publik menyediakan informasi yang dapat dipahami oleh warga dengan latar berbeda.","Kelompok masyarakat bekerja sama tanpa harus menyeragamkan identitas budaya."]],
+["Integrasi sosial","Proses membangun hubungan dan kesepakatan bersama yang menghubungkan kelompok berbeda.",["Warga yang berbeda latar menyusun aturan penggunaan taman dan menjalankannya bersama.","Dua kelompok menyelesaikan perselisihan melalui dialog lalu kembali bekerja dalam satu kegiatan.","Sekolah membuat forum bersama agar perwakilan kelas terlibat dalam keputusan kegiatan.","Komunitas membentuk tujuan bersama sambil tetap menghargai perbedaan anggotanya.","Warga bekerja sama menaati aturan yang disusun secara adil dan dipahami bersama."]]
+]},
+{title:"Penelitian Sosial",short:"Merancang pertanyaan, memilih metode, mengumpulkan data, dan menyampaikan temuan.",icon:"📋",tint:"#e4f1ee",goals:["Menjelaskan manfaat dan tahapan penelitian sosial sederhana.","Membedakan pendekatan kualitatif dan kuantitatif serta memilihnya sesuai pertanyaan.","Menyusun pertanyaan, mengumpulkan dan mengolah data, lalu menyampaikan hasil secara etis."],lessons:[
+{title:"1. Pengertian dan manfaat penelitian sosial",body:"Penelitian sosial adalah cara sistematis untuk mengumpulkan dan menafsirkan informasi tentang kehidupan masyarakat guna menjawab pertanyaan. Penelitian dapat memetakan pengalaman, menguji dugaan, memahami pola, atau membantu menyusun program. Hasilnya terbatas pada data, waktu, dan orang yang diteliti.",example:"Siswa ingin memahami kebiasaan membaca teman sekelas. Mereka memperjelas pertanyaan, meminta kesediaan responden, mencatat jawaban, lalu menyimpulkan hanya tentang kelas yang diteliti."},
+{title:"2. Kualitatif dan kuantitatif",body:"Pendekatan kualitatif terutama membantu memahami makna, pengalaman, alasan, dan proses melalui wawancara, observasi, atau dokumen. Pendekatan kuantitatif menggunakan pengukuran dan angka untuk menggambarkan jumlah, distribusi, atau hubungan antarvariabel. Keduanya dapat saling melengkapi.",bullets:["Pilih kualitatif bila pertanyaannya “bagaimana pengalaman” atau “mengapa proses ini terjadi”. Data dapat berupa transkrip dan catatan lapangan.","Pilih kuantitatif bila ingin menghitung frekuensi atau membandingkan ukuran dengan pertanyaan dan indikator yang jelas.","Metode campuran menggabungkan data angka dan uraian bila pertanyaan memerlukan keduanya serta waktu dan kemampuan memadai.","Metode ditentukan oleh tujuan dan pertanyaan, bukan karena satu pendekatan selalu lebih baik."],example:"Untuk menghitung moda transportasi yang paling banyak dipakai siswa, survei terstruktur cocok. Untuk memahami alasan siswa memilihnya, wawancara dapat memberi cerita lebih dalam."},
+{title:"3. Merancang pertanyaan dan sampel",body:"Pertanyaan penelitian sebaiknya jelas, terfokus, dapat dijawab dengan data, dan tidak mengarahkan jawaban. Tentukan populasi (kelompok sasaran), sampel (bagian populasi yang diteliti), konteks waktu-tempat, serta cara memilih informan. Sampel kecil memberi gambaran terbatas dan perlu disebutkan dalam laporan.",bullets:["Contoh fokus: “Bagaimana siswa kelas X menggunakan perpustakaan selama bulan ini?” lebih terukur daripada “Mengapa minat belajar menurun?”","Variabel adalah karakteristik yang diteliti; indikator membantu mengamati atau mengukurnya.","Wawancara, observasi, kuesioner, dan dokumentasi dipilih sesuai jenis informasi yang dibutuhkan.","Uji coba pertanyaan pada beberapa orang membantu menemukan kata yang membingungkan atau bias."],example:"Jika meneliti waktu perjalanan ke sekolah, tetapkan apakah yang dicatat adalah perkiraan menit, moda transportasi, atau pengalaman hambatan. Jangan mengganti definisi di tengah pengumpulan data."},
+{title:"4. Mengumpulkan, mengolah, dan menganalisis data",body:"Kumpulkan data secara konsisten dengan instrumen yang sesuai. Data kualitatif dapat diringkas ke tema; data kuantitatif dapat diedit, dikodekan, dikelompokkan, dan ditampilkan dalam tabel atau diagram. Periksa kelengkapan, kesalahan pencatatan, serta apakah bukti benar-benar menjawab pertanyaan.",bullets:["Editing: memeriksa kelengkapan dan keterbacaan data.","Coding: memberi kode atau kategori yang konsisten pada jawaban.","Tabulasi: menyusun data dalam tabel untuk memudahkan pembacaan.","Analisis: mencari tema, pola, perbandingan, atau hubungan dengan tetap memperhatikan konteks.","Penyajian visual perlu memiliki judul, keterangan, satuan, dan sumber yang jelas."],example:"Dari 30 jawaban tentang moda transportasi, siswa memeriksa data kosong, mengelompokkan jawaban, menghitung frekuensi, lalu membuat diagram batang. Mereka mencantumkan bahwa data hanya berasal dari satu kelas."},
+{title:"5. Etika penelitian",body:"Penelitian sosial melibatkan manusia dan informasi pribadi, sehingga peneliti perlu menjaga keselamatan, martabat, serta privasi partisipan. Jelaskan tujuan dan kegiatan dengan bahasa yang dipahami, minta persetujuan sukarela, dan beri ruang untuk menolak atau berhenti.",bullets:["Jangan mengumpulkan data pribadi yang tidak diperlukan; simpan catatan dengan aman.","Jangan menyebarkan nama atau cerita sensitif tanpa izin. Samarkan identitas bila diperlukan.","Hindari pertanyaan yang mempermalukan, memaksa, atau menimbulkan risiko bagi peserta.","Sampaikan temuan dengan jujur; jangan mengubah atau memilih data hanya demi mendukung dugaan.","Jika penelitian menyentuh masalah serius atau risiko keselamatan, libatkan guru/orang dewasa tepercaya dan ikuti prosedur sekolah."],example:"Sebelum mewawancarai teman tentang kebiasaan belajar, jelaskan bahwa jawaban hanya untuk tugas, tidak perlu menyebut nama, dan teman boleh tidak menjawab."},
+{title:"6. Laporan dan kesimpulan",body:"Laporan ringkas umumnya memuat latar belakang dan pertanyaan, tujuan, metode, temuan, pembahasan, kesimpulan, keterbatasan, serta sumber. Kesimpulan menjawab pertanyaan sesuai data. Rekomendasi sebaiknya realistis dan tidak menggeneralisasi temuan lokal menjadi gambaran seluruh masyarakat.",example:"Jika 18 dari 25 responden kelas memilih berjalan kaki, laporkan jumlah itu sebagai temuan kelas. Jangan menyatakan mayoritas seluruh siswa kota berjalan kaki tanpa sampel yang mewakili."}],
+summary:["Mulailah dari pertanyaan yang jelas dan dapat dijawab dengan data.","Metode dipilih sesuai tujuan: memahami pengalaman, mengukur pola, atau keduanya.","Populasi, sampel, variabel, dan indikator perlu didefinisikan.","Data diperiksa, dikelompokkan, dianalisis, lalu disajikan dengan jujur.","Persetujuan, privasi, keamanan, dan keterbatasan adalah bagian dari penelitian yang baik."],
+terms:[
+["Pertanyaan penelitian","Rumusan fokus yang jelas dan dapat dijawab melalui pengumpulan informasi.",["Kelompok merumuskan: bagaimana siswa kelas X memilih kegiatan ekstrakurikuler pada semester ini?","Sebelum turun lapangan, tim menentukan hal khusus yang ingin diketahui tentang fasilitas taman.","Siswa mengubah pertanyaan luas tentang pendidikan menjadi kajian terfokus tentang akses perpustakaan.","Rumusan yang meminta alasan dan pengalaman memberi petunjuk tentang jenis data yang perlu dikumpulkan.","Peneliti menulis satu pertanyaan utama agar data yang dicari tetap terarah."]],
+["Pendekatan kualitatif","Pendekatan untuk memahami pengalaman, makna, dan proses melalui data berupa uraian atau pengamatan.",["Wawancara mendalam digunakan untuk memahami pengalaman siswa baru menyesuaikan diri.","Peneliti mengamati cara warga bermusyawarah dan mencatat proses yang terjadi.","Tim membaca cerita peserta tentang alasan bergabung dalam komunitas.","Kajian ingin mengetahui makna tradisi bagi keluarga yang menjalaninya.","Catatan lapangan dan transkrip wawancara dianalisis untuk menemukan tema pengalaman."]],
+["Pendekatan kuantitatif","Pendekatan yang menggunakan ukuran dan data angka untuk menggambarkan atau menguji pola.",["Survei menghitung jumlah siswa menurut moda transportasi yang dipakai ke sekolah.","Peneliti membandingkan frekuensi kunjungan perpustakaan antarkelas menggunakan angka.","Kuesioner tertutup mencatat berapa responden memilih setiap jawaban.","Tim ingin mengukur rata-rata lama perjalanan dengan satuan menit.","Data numerik ditampilkan sebagai tabel frekuensi yang sesuai dengan pertanyaan penelitian."]],
+["Populasi","Keseluruhan kelompok sasaran yang menjadi cakupan pertanyaan penelitian.",["Untuk kajian kebiasaan membaca seluruh siswa kelas X, semua siswa kelas X menjadi kelompok sasaran.","Penelitian tentang pedagang pasar pagi menetapkan seluruh pedagang pasar tersebut sebagai cakupan.","Jika pertanyaannya tentang anggota klub sekolah, semua anggota klub menjadi sasaran kajian.","Tim menegaskan batas wilayah dan waktu sebelum menyebut siapa yang termasuk penelitian.","Kelompok yang ingin digeneralisasi hasilnya harus dinyatakan dengan jelas dalam rancangan."]],
+["Sampel","Sebagian anggota populasi yang dipilih sebagai sumber data untuk penelitian.",["Dari 200 siswa kelas X, peneliti memilih 40 orang untuk mengisi survei.","Tim mewawancarai 8 dari 30 pedagang yang terdaftar di pasar.","Kelompok memilih beberapa pengguna taman pada jam berbeda untuk memperoleh variasi pengalaman.","Dalam laporan, siswa menyebut bagaimana responden dipilih dan berapa jumlahnya.","Sebagian warga yang diwawancarai menjadi sumber informasi tentang pengalaman seluruh lingkungan yang ditetapkan."]],
+["Variabel dan indikator","Variabel adalah karakteristik yang dikaji; indikator adalah tanda teramati untuk mengenalinya.",["Untuk mengkaji partisipasi, tim menetapkan jumlah kehadiran kegiatan sebagai salah satu ukuran.","Peneliti menelaah akses belajar dengan indikator jarak, ketersediaan perangkat, dan koneksi internet.","Variabel waktu perjalanan diukur menggunakan perkiraan menit dari rumah ke sekolah.","Sebelum survei, kelompok menerangkan apa yang dimaksud dengan kebiasaan membaca dan tanda pengamatannya.","Kepuasan warga diterjemahkan menjadi beberapa pernyataan terukur di kuesioner."]],
+["Instrumen penelitian","Alat atau panduan yang dipakai secara terencana untuk memperoleh data.",["Pewawancara menggunakan daftar pertanyaan yang sama untuk setiap peserta.","Pengamat memakai lembar cek untuk mencatat kondisi halte pada waktu tertentu.","Kuesioner berisi pertanyaan tentang frekuensi peminjaman buku.","Perekam suara digunakan setelah peserta mengizinkan dan aturan privasi dijelaskan.","Tim menyiapkan pedoman observasi agar semua anggota mencatat aspek yang sama."]],
+["Persetujuan dan privasi","Perlindungan etis yang memberi peserta pilihan sukarela serta menjaga informasi pribadi.",["Sebelum wawancara, siswa menjelaskan tujuan kegiatan dan meminta izin secara sukarela.","Peserta boleh tidak menjawab pertanyaan yang membuatnya tidak nyaman.","Nama responden diganti kode pada laporan agar identitasnya tidak tersebar.","Catatan dengan informasi sensitif disimpan terbatas dan tidak diunggah ke grup kelas.","Peneliti meminta izin sebelum merekam suara atau membagikan kutipan."]],
+["Pengolahan data","Langkah menata data agar lengkap, konsisten, dan siap dianalisis.",["Siswa memeriksa jawaban kosong sebelum memasukkan hasil ke dalam tabel.","Jawaban terbuka dikelompokkan ke kategori dengan aturan pengodean yang konsisten.","Frekuensi moda transportasi disusun dalam tabel untuk memudahkan perbandingan.","Tim mengecek kembali angka yang tampak janggal dengan lembar jawaban asli.","Data wawancara diberi kode tema lalu ditata agar pola dapat dibaca."]],
+["Kesimpulan berbasis data","Jawaban akhir terhadap pertanyaan yang sebanding dengan bukti dan keterbatasan penelitian.",["Dari survei satu kelas, laporan menyimpulkan kebiasaan kelas itu dan tidak mengklaim mewakili seluruh kota.","Temuan menunjukkan pola yang terlihat, sementara laporan menyebut sampel kecil sebagai keterbatasan.","Peneliti menjawab pertanyaan utama dengan merujuk pada tabel dan kutipan wawancara.","Tim membedakan hasil pengamatan dari dugaan penyebab yang belum diuji.","Rekomendasi mengikuti temuan dan menyebut kelompok yang perlu dilibatkan lebih lanjut."]]
+]}
+];
 
-        // --- 10 Soal PG BARU (Materi Fungsi, Sifat, Hakikat) ---
-        { q: "Sosiologi membatasi diri dengan apa yang terjadi (das sein) dan bukan pada apa yang seharusnya terjadi (das sollen). Hal ini menunjukkan hakikat sosiologi sebagai ilmu pengetahuan yang ....", o: ["Empiris", "Murni", "Kategoris", "Abstrak"], a: 2, c: "★ Soal #26 (Sifat Kategoris)", e: "Kategoris berarti membatasi diri pada fakta/apa yang sedang terjadi, bukan nilai ideal (apa yang seharusnya)." },
-        { q: "Ilmu sosiologi bertujuan untuk membentuk dan mengembangkan ilmu pengetahuan secara abstrak, bukan ditujukan langsung untuk dipraktikkan. Ini berarti sosiologi adalah ....", o: ["Applied Science", "Pure Science", "Ilmu Khusus", "Humaniora"], a: 1, c: "★ Soal #27 (Pure Science)", e: "Sebagai pure science (ilmu murni), fokus sosiologi adalah pengembangan teori." },
-        { q: "Sosiolog yang berupaya menyelesaikan sengketa tanah warisan dengan mencari akar permasalahan dan status ahli waris sedang menjalankan fungsinya sebagai ....", o: ["Pendidik", "Peneliti", "Agen Perubahan", "Penengah Konflik"], a: 3, c: "★ Soal #28 (Peran Sosiolog)", e: "Sebagai penengah konflik, sosiolog menggunakan manajemen resolusi konflik." },
-        { q: "Dalam tahap pembangunan, sosiologi berguna untuk mengidentifikasi berbagai gejala sosial dan kebutuhan di lapisan masyarakat. Hal ini dilakukan pada tahap ....", o: ["Perencanaan", "Pelaksanaan", "Evaluasi", "Penilaian"], a: 0, c: "★ Soal #29 (Pembangunan: Perencanaan)", e: "Identifikasi kebutuhan masyarakat dilakukan di awal (Tahap Perencanaan)." },
-        { q: "Ketika terjadi permasalahan sosial yang bersumber dari perubahan sosial yang amat berat dan tidak terkendali, maka hukum berperan sebagai ....", o: ["Pengatur", "Penyelesaian masalah", "Pengawas", "Pendorong"], a: 1, c: "★ Soal #30 (Fungsi Hukum)", e: "Hukum sebagai penyelesaian masalah digunakan ketika permasalahan sosial berat." },
-        { q: "Upaya mempersiapkan masa depan kehidupan masyarakat dengan tujuan meminimumkan ekses/dampak buruk dari sebuah program (contoh: pemindahan penduduk bedol desa) merupakan pengertian dari ....", o: ["Penelitian sosial", "Perencanaan sosial", "Tahap evaluasi", "Mediasi konflik"], a: 1, c: "★ Soal #31 (Perencanaan Sosial)", e: "Perencanaan sosial menyiapkan pedoman cara hidup untuk mengatasi hambatan." },
-        { q: "Sosiolog memberikan sosialisasi tentang konversi minyak tanah ke gas elpiji agar masyarakat mau mengadopsi teknologi tersebut tanpa ragu. Peran sosiolog di sini adalah sebagai ....", o: ["Agen Perubahan", "Pendidik", "Mediator", "Peneliti"], a: 0, c: "★ Soal #32 (Agen Perubahan)", e: "Membantu dan mengarahkan masyarakat menerima perubahan sosial." },
-        { q: "Tahap di mana sosiolog bertugas menganalisis dan mengkaji efek (baik dan buruk) dari sebuah pembangunan yang telah berjalan disebut tahap ....", o: ["Evaluasi", "Pelaksanaan", "Perencanaan", "Identifikasi"], a: 0, c: "★ Soal #33 (Pembangunan: Evaluasi)", e: "Evaluasi bertujuan untuk perbaikan dan penilaian akhir suatu program." },
-        { q: "Salah satu sifat sosiologi adalah Abstrak atau Teoretis, yang artinya sosiologi ....", o: ["Menyelesaikan masalah konkret individu", "Mempelajari hal-hal gaib", "Menyusun abstraksi dari observasi untuk menjelaskan sebab-akibat", "Hanya berlaku di ranah filsafat"], a: 2, c: "★ Soal #34 (Sifat Abstrak)", e: "Abstrak artinya menyusun kerangka logis dari observasi untuk menjadi teori umum." },
-        { q: "Dalam melakukan riset, seorang sosiolog dilarang memanipulasi data dan harus memiliki prinsip kehati-hatian. Hal ini berkaitan dengan profesinya sebagai ....", o: ["Mediator", "Pendidik", "Peneliti yang handal", "Penengah konflik"], a: 2, c: "★ Soal #35 (Peneliti Sosiologi)", e: "Sosiolog sebagai peneliti harus menjaga objektivitas dan prinsip ilmiah (kehati-hatian)." }
-    ];
+const essayBanks = [
+[
+["Jelaskan pengertian sosiologi dengan bahasamu sendiri dan sebutkan dua fokus kajiannya.","Sosiologi adalah ilmu yang mempelajari kehidupan bersama dan pola hubungan manusia dalam masyarakat. Fokusnya antara lain interaksi antarindividu/kelompok, lembaga dan aturan sosial, serta perubahan sosial. Jawaban yang baik menyebut pola atau hubungan sosial, bukan hanya menyatakan sosiologi sebagai ilmu tentang manusia."],
+["Mengapa satu peristiwa pribadi dapat menjadi bahan kajian sosiologi? Berikan contoh.","Peristiwa pribadi dapat berkaitan dengan pola sosial yang dialami banyak orang atau dipengaruhi kondisi masyarakat. Contohnya, keterlambatan seorang siswa dapat diteliti bersama keterlambatan siswa lain dengan memeriksa transportasi dan jadwal. Jangan langsung menyimpulkan sebab sebelum mengumpulkan bukti."],
+["Uraikan empat ciri sosiologi sebagai ilmu dan berikan contoh singkat.","Empiris berarti berdasarkan pengamatan; teoretis menyusun penjelasan atas pola; kumulatif mengembangkan atau menguji pengetahuan sebelumnya; nonetis menjelaskan tanpa menghakimi. Contoh: meneliti antrean dengan observasi, memakai konsep interaksi, membandingkan temuan sebelumnya, lalu memaparkan pola secara objektif."],
+["Apa perbedaan fakta sosial yang diamati dengan opini peneliti?","Fakta adalah informasi yang dapat ditunjukkan sumber atau cara pemeriksaannya, misalnya jumlah siswa yang hadir. Opini adalah penilaian atau tafsir, misalnya menyebut mereka tidak disiplin. Tafsir boleh dibahas, tetapi harus dibedakan dari data dan didukung alasan."],
+["Jelaskan perbedaan objek material dan objek formal sosiologi.","Objek material merujuk pada hal yang dikaji, yaitu kehidupan masyarakat atau gejala sosial. Objek formal adalah sudut pandang khas sosiologi, seperti pola hubungan, interaksi, struktur, lembaga, dan perubahan. Satu peristiwa dapat dikaji beberapa ilmu dengan sudut yang berlainan."],
+["Apa yang dimaksud gejala sosial? Berikan satu contoh positif dan satu contoh yang menimbulkan masalah.","Gejala sosial adalah peristiwa atau pola yang berkaitan dengan kehidupan bersama. Contoh positif: warga membentuk perpustakaan komunitas. Contoh yang dapat menjadi masalah: ketimpangan akses layanan kesehatan. Terangkan konteks dan dampaknya; jangan menyamakan semua gejala dengan masalah."],
+["Jelaskan fungsi penelitian sosial bagi masyarakat.","Penelitian sosial menyusun informasi tentang kebutuhan, pengalaman, dan pola kehidupan masyarakat. Informasi dapat membantu mengenali persoalan, membandingkan alternatif, merancang program, dan mengevaluasi dampak. Hasil penelitian bukan satu-satunya dasar keputusan dan harus dibaca bersama keterbatasannya."],
+["Bagaimana sosiologi membantu perencanaan program sosial? Gunakan satu contoh.","Sosiologi membantu memahami siapa yang membutuhkan, hambatan yang mereka hadapi, kebiasaan setempat, dan kemungkinan dampak program. Misalnya, sebelum membuat kelas belajar warga, pengelola menanyakan waktu luang, keamanan perjalanan, kebutuhan mata pelajaran, dan ketersediaan relawan."],
+["Apa peran sosiologi dalam memahami pembangunan?","Sosiologi membantu mengidentifikasi kelompok yang memperoleh manfaat atau menghadapi dampak, menelaah partisipasi warga, dan melihat perubahan pola hubungan maupun akses. Contohnya pembangunan jalan ditelaah dari mobilitas, perubahan usaha, akses kelompok rentan, dan suara warga sekitar."],
+["Mengapa sosiologi disebut nonetis, dan mengapa prinsip ini bukan berarti peneliti bebas dari etika?","Nonetis berarti sosiologi sebagai ilmu menjelaskan fakta dan pola tanpa memberi vonis moral sebagai kesimpulan ilmiah. Etika penelitian tetap wajib: peneliti menghormati persetujuan, privasi, keselamatan, dan martabat partisipan. Kedua hal itu membahas aspek yang berbeda."],
+["Bedakan pendekatan sosiologis dari prasangka terhadap kelompok.","Pendekatan sosiologis memeriksa konteks, variasi pengalaman, bukti, dan hubungan sosial. Prasangka membuat penilaian awal tanpa memeriksa individu atau data. Contoh: meneliti sebab absensi dengan berbagai sumber berbeda dari menuduh satu kelompok malas."],
+["Mengapa kesimpulan harus sebanding dengan data?","Data terbatas pada sampel, lokasi, waktu, dan cara pengumpulan tertentu. Jika 20 siswa satu kelas disurvei, hasilnya paling aman menggambarkan responden atau kelas itu, bukan seluruh pelajar. Pernyataan yang terlalu luas berisiko menyesatkan."],
+["Susun langkah berpikir sosiologis sederhana untuk mengkaji sampah di lingkungan.","Tentukan pertanyaan dan batas wilayah/waktu; amati titik dan waktu penumpukan; wawancarai pihak terkait; periksa fasilitas serta aturan; cari pola penyebab dan dampak; bahas alternatif dengan warga; simpulkan sesuai bukti. Jaga agar catatan tidak menyalahkan kelompok tanpa dasar."],
+["Apa manfaat konsep atau teori dalam penelitian sosial?","Konsep membantu memberi nama dan batas pada hal yang dikaji, sedangkan teori membantu menyusun penjelasan hubungan antargejala. Keduanya menuntun pertanyaan dan analisis. Teori tidak menggantikan pengumpulan bukti dan perlu ditinjau jika data tidak mendukung."],
+["Jelaskan perbedaan fungsi penelitian dan pemecahan masalah sosial.","Penelitian menghasilkan informasi yang teratur tentang gejala. Pemecahan masalah menggunakan pemahaman tersebut untuk memilih dan menjalankan tindakan, lalu menilai hasilnya. Penelitian dapat mendukung pemecahan masalah, tetapi keduanya bukan tahap yang identik."],
+["Mengapa gejala sosial perlu dipahami dari berbagai sudut pandang?","Satu gejala biasanya melibatkan banyak pihak, penyebab, dan akibat. Mendengar berbagai pengalaman mengurangi kesimpulan sepihak dan membantu menemukan dampak yang mungkin luput. Sudut pandang berbeda tetap diperiksa dengan bukti dan konteks."],
+["Buat contoh pertanyaan sosiologis tentang penggunaan ruang publik dan jelaskan mengapa pertanyaan itu baik.","Contoh: “Bagaimana remaja dan lansia menggunakan taman lingkungan pada sore hari?” Pertanyaan ini menentukan kelompok, tempat, dan waktu serta dapat dijawab melalui observasi atau wawancara. Hindari rumusan menghakimi seperti “Mengapa remaja merusak taman?” sebelum ada bukti."],
+["Apa perbedaan menjelaskan penyebab dan menyalahkan pelaku?","Penjelasan mencari kondisi, proses, dan hubungan yang dapat diperiksa; menyalahkan menetapkan kesalahan moral pada orang. Penelitian tentang pelanggaran aturan, misalnya, dapat mengkaji pemahaman aturan, akses fasilitas, dan kebiasaan tanpa menghapus tanggung jawab individu."],
+["Bagaimana hasil kajian sosiologi dapat digunakan dalam evaluasi program?","Bandingkan tujuan dengan data setelah program berjalan, dengarkan pengalaman peserta dan pihak terdampak, periksa siapa yang terjangkau, dan catat dampak tak terduga. Kesimpulan evaluasi perlu menjelaskan periode serta data yang digunakan sebelum menyarankan perbaikan."],
+["Tuliskan rangkuman hubungan antara sosiologi, gejala sosial, dan kehidupan sehari-hari.","Sosiologi menyediakan konsep dan cara ilmiah untuk membaca pola kehidupan bersama. Dengan mengamati gejala sosial secara kontekstual, kita memahami hubungan individu dengan kelompok serta lembaga, menghindari prasangka, dan merancang tindakan yang lebih sesuai kebutuhan masyarakat."]
+],
+[
+["Jelaskan bahwa manusia adalah individu sekaligus makhluk sosial.","Sebagai individu, setiap manusia memiliki ciri, pengalaman, pilihan, dan kebutuhan unik. Sebagai makhluk sosial, ia membutuhkan interaksi, belajar nilai dan pengetahuan, serta hidup dalam hubungan dengan orang lain. Kedua sisi ini berjalan bersama."],
+["Apa perbedaan identitas diri dan label sosial?","Identitas diri mencakup cara seseorang memahami dirinya yang terbentuk dari pengalaman dan berbagai keanggotaan. Label sosial adalah kategori atau sebutan yang dilekatkan orang lain. Label mungkin hanya menangkap satu sisi dan tidak mewakili keseluruhan diri seseorang."],
+["Bedakan status sosial dan peran sosial dengan contoh.","Status adalah posisi dalam hubungan sosial, misalnya siswa atau ketua kelas. Peran adalah harapan perilaku yang melekat pada posisi, misalnya belajar sebagai siswa atau mengoordinasi kelas sebagai ketua. Seseorang dapat memiliki banyak status dan peran sekaligus."],
+["Jelaskan kelompok primer dan sekunder.","Kelompok primer biasanya memiliki hubungan dekat, personal, dan relatif lama, seperti keluarga dekat. Kelompok sekunder dibentuk untuk tujuan tertentu dan hubungan lebih formal, seperti panitia acara. Pembeda utamanya sifat hubungan, bukan ukuran kelompok semata."],
+["Apa syarat terjadinya interaksi sosial?","Interaksi sosial melibatkan kontak sosial dan komunikasi. Kontak bisa langsung atau melalui media; komunikasi menyampaikan dan menafsirkan pesan sehingga pihak lain memberi respons. Kehadiran fisik saja belum tentu berarti interaksi jika tidak ada hubungan timbal balik."],
+["Bedakan kerja sama dan akomodasi.","Kerja sama adalah usaha bersama untuk mencapai tujuan. Akomodasi adalah penyesuaian atau penyelesaian perbedaan agar hubungan dapat berjalan lagi. Musyawarah untuk membagi jadwal setelah berselisih merupakan akomodasi; menjalankan jadwal yang disepakati bersama dapat melibatkan kerja sama."],
+["Apa perbedaan nilai sosial dan norma sosial? Beri satu contoh kaitan keduanya.","Nilai adalah anggapan umum tentang hal yang dianggap penting atau baik; norma adalah pedoman tindakan yang lebih konkret. Nilai kebersihan dapat diwujudkan melalui norma membuang sampah pada tempatnya dan sanksi yang disepakati."],
+["Mengapa norma dapat berbeda antarlingkungan dan berubah?","Norma berkembang dari kebutuhan, nilai, sejarah, dan kesepakatan kelompok. Lingkungan berbeda menghadapi keadaan yang berlainan; perubahan teknologi dan hubungan sosial juga mengubah kebutuhan. Norma dapat ditinjau melalui dialog dan aturan yang berlaku."],
+["Jelaskan fungsi keluarga dan sekolah sebagai agen sosialisasi.","Keluarga memberi pembelajaran awal tentang bahasa, kebiasaan, rasa aman, tanggung jawab, serta hubungan. Sekolah mengenalkan ilmu, aturan formal, kerja sama dengan orang berbeda, dan tanggung jawab sebagai warga sekolah. Keduanya saling melengkapi."],
+["Apa peran teman sebaya dan media dalam sosialisasi?","Teman sebaya menjadi ruang untuk belajar kerja sama, bernegosiasi, dan mengembangkan identitas. Media menyebarkan informasi, nilai, dan model perilaku kepada banyak orang. Isi media perlu dinilai kritis karena tidak semua informasi akurat atau sesuai kebutuhan."],
+["Mengapa sosialisasi berlangsung sepanjang hayat?","Peran dan lingkungan seseorang berubah sepanjang hidup, sehingga ia terus mempelajari aturan dan keterampilan baru. Siswa baru belajar budaya sekolah; orang dewasa belajar aturan tempat kerja; warga mempelajari layanan digital. Sosialisasi tidak berhenti setelah masa kanak-kanak."],
+["Jelaskan perbedaan pengendalian sosial preventif dan korektif.","Preventif dilakukan sebelum pelanggaran untuk mencegahnya, misalnya sosialisasi aturan keselamatan. Korektif dilakukan setelah kejadian, misalnya mediasi dan pembinaan. Respons perlu proporsional, melindungi pihak terdampak, dan mengikuti prosedur."],
+["Bagaimana keteraturan sosial terbentuk?","Keteraturan tumbuh ketika pola interaksi dapat diperkirakan karena nilai dan norma dipahami, aturan diterapkan secara adil, serta warga berpartisipasi. Keteraturan yang baik bukan sekadar takut hukuman; komunikasi dan kepercayaan turut mendukungnya."],
+["Apa yang dimaksud konflik peran? Beri contoh cara mengelolanya.","Konflik peran muncul saat tuntutan dari dua peran bertabrakan. Siswa yang menjadi atlet dan pengurus kelas mungkin memiliki jadwal bersamaan. Ia dapat berkomunikasi, menyepakati prioritas, mendelegasikan tugas, dan mencari jadwal alternatif."],
+["Mengapa sanksi sosial sebaiknya proporsional dan mendidik?","Sanksi yang proporsional berkaitan dengan tindakan dan membantu pemulihan atau pembelajaran. Hukuman yang merendahkan dapat menimbulkan luka dan tidak menyelesaikan penyebab masalah. Aturan, konsekuensi, dan prosedur perlu diketahui serta diterapkan adil."],
+["Jelaskan bagaimana komunikasi membantu menyelesaikan perselisihan kelompok.","Komunikasi memberi ruang bagi pihak untuk menjelaskan pengalaman, mengoreksi salah paham, dan memahami kebutuhan satu sama lain. Dialog terarah atau mediator dapat membantu merumuskan kesepakatan yang jelas, aman, dan dapat dijalankan."],
+["Apa hubungan antara sosialisasi dan pembentukan identitas?","Melalui interaksi, seseorang belajar bahasa, nilai, peran, dan cara menjadi anggota kelompok. Ia juga menafsirkan pengalaman itu dan membuat pilihan. Identitas berkembang dari perpaduan pengalaman sosial dan keunikan individu, bukan dibentuk sepihak oleh lingkungan."],
+["Bagaimana nilai bersama dapat mendukung kerja sama dalam kelompok?","Nilai seperti kepercayaan dan tanggung jawab memberi alasan bersama untuk berpartisipasi. Ketika diterjemahkan menjadi norma yang jelas, anggota memahami pembagian tugas dan harapan. Kesepakatan dapat diperbarui saat kondisi berubah."],
+["Jelaskan contoh interaksi disosiatif yang dapat ditangani secara konstruktif.","Dua klub bersaing memperebutkan jadwal aula. Persaingan dapat dikelola dengan menyusun jadwal bergiliran, menetapkan aturan yang sama, dan mengevaluasi penggunaannya. Persaingan tidak harus berubah menjadi konflik merusak jika ada mekanisme adil."],
+["Buat peta hubungan antara individu, kelompok, sosialisasi, dan keteraturan sosial.","Individu berinteraksi dan membentuk atau bergabung dalam kelompok. Melalui sosialisasi, ia mempelajari nilai, norma, dan peran. Ketika aturan dipahami dan dijalankan secara adil, interaksi lebih dapat diperkirakan sehingga keteraturan sosial terbentuk."]
+],
+[
+["Apa yang dimaksud gejala sosial? Sebutkan dua ragamnya.","Gejala sosial adalah peristiwa atau pola yang berkaitan dengan kehidupan bersama. Ragamnya dapat berupa perubahan sosial, kerja sama, mobilitas penduduk, perbedaan akses layanan, konflik, atau kegiatan komunitas. Gejala sosial tidak selalu merupakan masalah."],
+["Bedakan perbedaan sosial dan ketimpangan sosial.","Perbedaan sosial adalah variasi identitas atau cara hidup, sedangkan ketimpangan menyangkut distribusi kesempatan, sumber daya, layanan, atau kekuasaan yang tidak setara. Perbedaan bahasa saja tidak menunjukkan tingkatan; hambatan layanan karena bahasa dapat menjadi ketimpangan akses."],
+["Jelaskan pengertian heterogenitas sosial dan manfaat memahaminya.","Heterogenitas adalah keberagaman latar belakang, identitas, dan pengalaman di masyarakat. Memahaminya membantu kita merancang komunikasi dan layanan yang menjangkau warga berbeda serta menghindari anggapan bahwa satu kelompok mempunyai pengalaman seragam."],
+["Apa yang dimaksud identitas multidimensi? Berikan contoh.","Identitas multidimensi terdiri atas berbagai sisi yang saling berinteraksi, seperti usia, pekerjaan, bahasa, wilayah, minat, pendidikan, atau disabilitas. Seseorang dapat menjadi siswa, atlet, anak, dan anggota komunitas. Satu kategori tidak cukup untuk menjelaskan dirinya."],
+["Bedakan perbedaan horizontal dan stratifikasi sosial.","Perbedaan horizontal menggambarkan variasi yang tidak otomatis menunjukkan tinggi-rendah, seperti bahasa atau pekerjaan. Stratifikasi adalah pelapisan yang berkaitan dengan ketidaksetaraan sumber daya, prestise, atau kekuasaan. Analisis harus melihat bagaimana akses dan hubungan kuasa bekerja."],
+["Apa arti mobilitas sosial dan faktor apa yang dapat memengaruhinya?","Mobilitas sosial adalah perubahan posisi sosial seseorang atau kelompok. Pendidikan, kesempatan kerja, kebijakan, jaringan, kondisi ekonomi, diskriminasi, dan akses layanan dapat membuka atau menghambatnya. Mobilitas tidak hanya ditentukan usaha individu."],
+["Jelaskan perbedaan stereotip, prasangka, dan diskriminasi.","Stereotip adalah generalisasi tentang kelompok; prasangka adalah sikap atau penilaian awal; diskriminasi adalah perlakuan yang membatasi atau merugikan berdasarkan identitas. Contoh: anggapan umum, rasa curiga sebelum mengenal, lalu penolakan kesempatan."],
+["Bagaimana stereotip dapat berkembang menjadi diskriminasi?","Generalisasi dapat membentuk dugaan negatif; dugaan itu memengaruhi keputusan dan mendorong perlakuan tidak adil. Misalnya anggapan bahwa kelompok tertentu tidak mampu dapat membuat mereka tidak diberi kesempatan membuktikan kemampuan. Pencegahan perlu memeriksa kriteria dan bukti."],
+["Apa itu etnosentrisme dan bagaimana menguranginya?","Etnosentrisme adalah kecenderungan menilai budaya lain hanya dengan ukuran budaya sendiri. Kita dapat menguranginya dengan memahami konteks budaya, mendengar penjelasan anggotanya, menyadari bias pribadi, serta membedakan perbedaan kebiasaan dari pelanggaran hak."],
+["Apa ciri masyarakat multikultural yang inklusif?","Masyarakat multikultural terdiri atas beragam kelompok dan memberi pengakuan serta kesempatan yang setara untuk berpartisipasi. Aturan publik melindungi martabat, dialog antarkelompok berlangsung, dan layanan memperhatikan kebutuhan berbeda tanpa memaksa penyeragaman."],
+["Jelaskan hubungan empati dan penghormatan terhadap keberagaman.","Empati membantu kita memahami bagaimana situasi dirasakan orang lain; penghormatan diwujudkan dengan memperlakukan mereka secara bermartabat dan adil. Keduanya mendorong kita mendengarkan, tidak memberi cap, dan meninjau apakah keputusan menghalangi akses kelompok tertentu."],
+["Bagaimana cara menganalisis gejala sosial dengan menghindari prasangka?","Tentukan gejala dan konteks; bedakan pengamatan dari anggapan; gunakan beberapa sumber data; dengarkan pihak terdampak; cari variasi pengalaman; dan simpulkan secara hati-hati. Hindari bahasa yang menyalahkan kelompok sebelum sebab dan pola diperiksa."],
+["Berikan contoh tindakan diskriminatif di sekolah dan usulkan respons yang tepat.","Contoh: siswa ditolak bergabung dalam kegiatan hanya karena bahasa keluarga atau disabilitasnya, meskipun memenuhi syarat. Responsnya melindungi siswa terdampak, memeriksa aturan, menghentikan perlakuan tidak adil, menyediakan akses, dan mengikuti mekanisme sekolah."],
+["Mengapa satu gejala sosial dapat memberi dampak berbeda pada kelompok berbeda?","Kelompok memiliki sumber daya, lokasi, kebutuhan, dan kuasa yang berlainan. Digitalisasi layanan dapat memudahkan warga dengan koneksi kuat namun menyulitkan warga tanpa perangkat. Analisis dampak perlu membandingkan pengalaman, bukan hanya menghitung manfaat rata-rata."],
+["Jelaskan contoh perbedaan sosial yang tidak boleh dijadikan dasar perlakuan tidak adil.","Perbedaan bahasa, agama, asal, usia, atau pekerjaan tidak boleh menjadi alasan menolak hak dan kesempatan yang setara. Kriteria layanan seharusnya relevan dengan kebutuhan dan diterapkan konsisten, sambil menyediakan penyesuaian yang diperlukan."],
+["Apa manfaat dialog antarkelompok dalam masyarakat beragam?","Dialog memberi ruang berbagi pengalaman, mengoreksi informasi keliru, mengenali kebutuhan, dan merumuskan aturan bersama. Dialog perlu aman dan setara; tidak menggantikan kewajiban menghentikan ancaman atau perlakuan diskriminatif."],
+["Jelaskan bagaimana integrasi sosial dapat dibangun tanpa menghilangkan perbedaan.","Integrasi dibangun lewat tujuan dan aturan bersama, partisipasi yang adil, kerja sama, serta penyelesaian konflik. Kelompok dapat tetap mempertahankan bahasa dan tradisi masing-masing selama hak orang lain dihormati dan kesepakatan publik dijalankan."],
+["Pilih satu gejala sosial di sekitar dan uraikan pihak yang mungkin terdampak.","Contoh perubahan harga pangan dapat berdampak pada keluarga berpenghasilan berbeda, pedagang, pemasok, dan pengelola bantuan. Jawaban yang kuat menentukan tempat dan waktu, menyebut kelompok dengan pengalaman bervariasi, serta tidak menggeneralisasi tanpa data."],
+["Mengapa penting membedakan fakta dan pendapat saat membahas kelompok sosial?","Fakta memiliki sumber dan cara pemeriksaan, sedangkan pendapat adalah penilaian atau tafsir. Mencampur keduanya dapat menyebarkan stereotip seolah-olah terbukti. Pemisahan membantu diskusi lebih adil dan memungkinkan klaim diperiksa."],
+["Rancang satu kegiatan kelas untuk menumbuhkan penghormatan terhadap keberagaman.","Contoh: diskusi cerita pengalaman dengan persetujuan sukarela, aturan anti-ejekan, kesempatan bicara yang seimbang, dan refleksi tentang akses kegiatan. Hindari meminta siswa mewakili seluruh kelompoknya. Evaluasi kegiatan dari rasa aman dan partisipasi peserta."]
+],
+[
+["Jelaskan pengertian dan manfaat penelitian sosial.","Penelitian sosial mengumpulkan dan menafsirkan informasi secara sistematis tentang kehidupan masyarakat untuk menjawab pertanyaan. Manfaatnya antara lain memahami pengalaman, menggambarkan pola, menguji dugaan, merencanakan program, dan mengevaluasi dampak. Hasil harus dibatasi sesuai data."],
+["Susun tahapan penelitian sosial sederhana.","Tentukan topik dan pertanyaan; telaah informasi awal; tetapkan tujuan, populasi, dan sampel; pilih pendekatan serta instrumen; minta persetujuan; kumpulkan dan olah data; analisis; simpulkan; tulis laporan dengan keterbatasan dan sumber."],
+["Bedakan pendekatan kualitatif dan kuantitatif.","Kualitatif mengkaji makna, pengalaman, atau proses melalui uraian, wawancara, observasi, dan dokumen. Kuantitatif mengukur jumlah atau hubungan menggunakan angka dan instrumen terstruktur. Pilihan ditentukan pertanyaan; keduanya dapat digabung bila diperlukan."],
+["Buat contoh pertanyaan yang cocok dijawab dengan pendekatan kualitatif.","Contoh: “Bagaimana pengalaman siswa baru beradaptasi dengan lingkungan sekolah?” Wawancara atau pengamatan dapat mengungkap proses dan makna yang dialami. Pertanyaan kualitatif sebaiknya terbuka dan tidak mengasumsikan jawaban."],
+["Buat contoh pertanyaan kuantitatif dan data yang diperlukan.","Contoh: “Berapa lama waktu perjalanan siswa kelas X menuju sekolah?” Data yang diperlukan adalah perkiraan durasi dalam menit dari sampel yang ditetapkan. Definisi waktu, periode, dan cara pencatatan perlu dibuat konsisten."],
+["Jelaskan populasi dan sampel dengan contoh.","Populasi adalah keseluruhan kelompok sasaran; sampel adalah sebagian anggota yang dipilih sebagai sumber data. Jika penelitian mengenai 300 siswa kelas X, seluruh 300 siswa adalah populasi dan 60 responden terpilih adalah sampel. Cara pemilihan memengaruhi cakupan kesimpulan."],
+["Apa itu variabel dan indikator? Berikan contoh.","Variabel adalah karakteristik yang dikaji; indikator adalah tanda yang dapat diamati atau diukur. Untuk akses perpustakaan, variabel akses dapat memiliki indikator jarak, jam buka, dan ketersediaan buku. Indikator harus sesuai pertanyaan penelitian."],
+["Bandingkan wawancara, observasi, kuesioner, dan dokumentasi.","Wawancara memperoleh jawaban lisan dan pengalaman; observasi mencatat tindakan atau keadaan; kuesioner mengumpulkan jawaban terstruktur dari banyak responden; dokumentasi memakai catatan atau arsip yang relevan. Pilih metode berdasar data yang dibutuhkan dan etika."],
+["Apa fungsi instrumen penelitian?","Instrumen seperti pedoman wawancara, lembar observasi, atau kuesioner membantu pengumpulan data terarah dan konsisten. Instrumen yang jelas mengurangi perbedaan pencatatan antaranggota tim. Uji coba dapat menemukan pertanyaan membingungkan atau pilihan jawaban yang kurang."],
+["Jelaskan editing, coding, dan tabulasi.","Editing memeriksa kelengkapan serta kesalahan data; coding memberi kategori atau kode secara konsisten; tabulasi menyusun data dalam tabel. Langkah ini menyiapkan data untuk analisis dan harus dilakukan hati-hati agar makna jawaban tidak berubah."],
+["Bagaimana data kualitatif dapat dianalisis secara sederhana?","Baca catatan atau transkrip berulang; tandai bagian yang relevan; beri kode; kelompokkan kode menjadi tema; bandingkan pengalaman; lalu pilih kutipan yang mewakili dengan izin dan anonimisasi. Jelaskan proses serta variasi yang ditemukan."],
+["Bagaimana data kuantitatif sederhana dapat disajikan?","Hitung frekuensi atau persentase sesuai kebutuhan, susun tabel atau diagram berjudul, cantumkan satuan dan jumlah responden. Periksa total data dan sumbernya. Jangan memakai grafik yang menyesatkan atau menyimpulkan sebab-akibat dari hubungan saja."],
+["Mengapa persetujuan partisipan penting?","Persetujuan membuat calon partisipan memahami tujuan, kegiatan, penggunaan data, dan hak untuk menolak atau berhenti. Kesediaan harus sukarela dan menggunakan bahasa jelas, terutama saat topiknya pribadi. Persetujuan tidak menghapus kewajiban menjaga keamanan."],
+["Sebutkan cara melindungi privasi responden.","Kumpulkan hanya data yang diperlukan; samarkan nama; batasi akses catatan; simpan berkas dengan aman; jangan membagikan kutipan sensitif tanpa izin; dan hapus data sesuai kesepakatan. Jelaskan siapa yang akan melihat hasil."],
+["Mengapa pertanyaan penelitian harus jelas dan tidak menggiring?","Pertanyaan yang jelas menuntun pada data yang relevan. Pertanyaan menggiring memasukkan dugaan atau mendorong jawaban tertentu, sehingga data bias. Contoh netral: “Apa pendapatmu tentang jam perpustakaan?” bukan “Bukankah jam perpustakaan terlalu singkat?”"],
+["Apa perbedaan korelasi dan sebab-akibat dalam penelitian?","Korelasi menunjukkan dua hal berubah bersama; itu belum membuktikan satu menyebabkan yang lain. Hubungan dapat dipengaruhi faktor ketiga atau kebetulan. Untuk klaim sebab-akibat, perlu rancangan dan bukti yang lebih kuat daripada survei sederhana."],
+["Apa yang perlu dicantumkan dalam laporan penelitian sederhana?","Laporan memuat topik dan pertanyaan, tujuan, metode dan sampel, cara mengumpulkan data, temuan, analisis, kesimpulan, keterbatasan, serta sumber. Sajikan data dengan jelas dan jaga anonimitas partisipan."],
+["Mengapa keterbatasan penelitian perlu dilaporkan?","Keterbatasan membantu pembaca menilai seberapa jauh hasil dapat digunakan. Sampel kecil, waktu singkat, atau data yang hanya berasal dari satu lokasi membatasi generalisasi. Mengakuinya meningkatkan kejujuran dan memberi arah untuk penelitian lanjutan."],
+["Rancang penelitian sederhana tentang penggunaan kantin sekolah.","Rumusan: bagaimana pola kunjungan siswa kelas X ke kantin saat istirahat? Tetapkan kelas dan periode; gunakan observasi jumlah pengunjung serta kuesioner singkat tentang waktu dan kebutuhan; minta izin; tabulasikan data; simpulkan terbatas pada lokasi dan waktu tersebut."],
+["Apa risiko menggunakan satu sumber data saja?","Satu sumber dapat tidak lengkap, bias ingatan, atau hanya mewakili pengalaman tertentu. Membandingkan wawancara, observasi, dan dokumen yang relevan dapat memperkuat pemahaman. Jika triangulasi tidak memungkinkan, sebutkan keterbatasan secara terbuka."],
+["Jelaskan bagaimana hasil penelitian dapat disampaikan secara bertanggung jawab.","Gunakan bahasa jelas, tampilkan bukti yang mendukung, bedakan temuan dan tafsir, sebutkan metode serta keterbatasan, lindungi identitas, dan hindari klaim lebih luas dari data. Berikan rekomendasi yang sesuai temuan dan hormati pihak terdampak."]
+]
+];
 
-    // Data Soal Esai (15 Soal)
-    const essayData = [
-        { q: "Jelaskan latar belakang historis lahirnya ilmu Sosiologi di Eropa pada abad ke-19!", k: "Dilatarbelakangi oleh Revolusi Industri (Inggris) yang memicu kesenjangan dan Revolusi Sosial (Prancis) yang meruntuhkan kediktatoran/absolutisme." },
-        { q: "Mengapa Auguste Comte dijuluki sebagai 'Bapak Sosiologi'?", k: "Karena ia adalah orang pertama yang mengusulkan istilah 'Sosiologi' dalam bukunya Positive Philosophy (1838)." },
-        { q: "Bandingkan definisi Sosiologi menurut Max Weber dan Émile Durkheim!", k: "Max Weber: Mempelajari tindakan sosial (social action). Émile Durkheim: Mempelajari fakta sosial (eksternal, umum, memaksa)." },
-        { q: "Bedakan antara Objek Material dan Objek Formal dalam ilmu Sosiologi!", k: "Objek Material: Sasaran umum kajian (Manusia & Masyarakat). Objek Formal: Pusat kajian khusus (Hubungan antarmanusia/interaksi sosial)." },
-        { q: "Mengapa Sosiologi di Indonesia baru berkembang pesat setelah Indonesia merdeka?", k: "Karena pada masa penjajahan Belanda, pendidikan ilmu sosial dibatasi, Belanda lebih memprioritaskan ilmu hukum." },
-        { q: "Jelaskan perbedaan antara Simpati dan Empati!", k: "Simpati: Perasaan tertarik/kasihan. Empati: Lebih mendalam, kemampuan menempatkan diri pada posisi orang lain hingga mendorong aksi nyata." },
-        { q: "Bagaimana Sugesti dapat memengaruhi opini publik?", k: "Sugesti mudah diterima jika dari tokoh berwibawa/situasi cemas, informasi diterima tanpa pertimbangan kritis." },
-        { q: "Bedakan antara Internalisasi Nilai Sosial dengan Kepatuhan Semu!", k: "Internalisasi: Aturan diserap dan dipatuhi berdasar moral (tanpa pengawasan). Kepatuhan semu: Patuh karena takut dihukum." },
-        { q: "Apa yang dimaksud dengan Rasionalisasi dalam pelanggaran aturan?", k: "Usaha mencari alasan pembenaran yang seolah-olah masuk akal atas kesalahan yang dilakukan." },
-        { q: "Mengapa individualisme melemahkan solidaritas sosial?", k: "Berfokus pada kepentingan pribadi sehingga menurunkan semangat gotong royong masyarakat." },
-        
-        // --- 5 Soal Esai BARU (Materi Hakikat & Fungsi) ---
-        { q: "Sosiologi merupakan ilmu pengetahuan yang bersifat Kategoris dan Murni (Pure Science). Jelaskan makna kedua sifat tersebut!", k: "Kategoris: Sosiologi membatasi diri pada fakta (apa yang terjadi), bukan nilai ideal (apa yang seharusnya terjadi). Murni (Pure Science): Bertujuan mengembangkan teori dan abstraksi secara ilmiah, bukan sekadar ilmu terapan untuk dipraktikkan langsung." },
-        { q: "Jelaskan peranan sosiolog sebagai Agen Perubahan (Agent of Change) disertai satu contoh nyata!", k: "Sosiolog memprediksi dampak perubahan dan menyosialisasikannya agar masyarakat siap menerima inovasi. Contoh: Memberikan penyuluhan dan pendampingan kepada masyarakat desa terkait program konversi penggunaan kompor gas dari minyak tanah." },
-        { q: "Mengapa sosiologi sangat diperlukan pada 'Tahap Perencanaan' dalam proses pembangunan?", k: "Karena pada tahap ini, sosiologi menyajikan data mengenai kebutuhan riil, struktur kekuasaan, saluran komunikasi, serta pola kebudayaan masyarakat sehingga program pembangunan tepat sasaran dan tidak menimbulkan resistensi." },
-        { q: "Apa yang dimaksud dengan Perencanaan Sosial? Berikan contohnya!", k: "Upaya mempersiapkan masa depan masyarakat untuk meminimumkan dampak negatif (ekses) suatu perubahan. Contoh: Merencanakan program relokasi (bedol desa) bagi warga yang daerahnya dijadikan proyek waduk nasional." },
-        { q: "Bagaimana peran sosiolog sebagai Penengah Konflik bekerja dalam masyarakat?", k: "Sosiolog memetakan masalah, menganalisis aktor yang berkonflik (peta konflik), dan menerapkan kemampuan manajemen resolusi. Misalnya, mencari akar sejarah sengketa tanah antarwarga lalu mencarikan alternatif penyelesaian kekeluargaan." }
-    ];
+const conceptMaps = [
+["Fakta dan pengamatan","Konsep serta teori","Pola gejala sosial","Pemahaman dan tindakan"],
+["Identitas individu","Interaksi dan kelompok","Nilai, norma, sosialisasi","Keteraturan sosial"],
+["Keberagaman masyarakat","Perbedaan dan akses","Dampak sosial","Empati dan inklusi"],
+["Pertanyaan penelitian","Metode dan pengumpulan data","Pengolahan dan analisis","Temuan dan laporan"]
+];
+const svgArts = [
+'<svg viewBox="0 0 120 90" aria-hidden="true"><circle cx="60" cy="40" r="25" fill="#f4ca68"/><circle cx="60" cy="40" r="14" fill="#fffefa"/><path d="m78 59 20 20" stroke="#ed7658" stroke-width="9" stroke-linecap="round"/><circle cx="26" cy="25" r="8" fill="#70b3ae"/><circle cx="28" cy="64" r="7" fill="#ed7658"/><circle cx="100" cy="22" r="7" fill="#70b3ae"/><path d="M33 27 48 34M34 62l14-13M84 33l10-7" stroke="#1c5545" stroke-width="2" stroke-dasharray="3 4"/></svg>',
+'<svg viewBox="0 0 120 90" aria-hidden="true"><circle cx="48" cy="42" r="25" fill="#9bc8dc" opacity=".8"/><circle cx="72" cy="42" r="25" fill="#f4ca68" opacity=".8"/><circle cx="60" cy="58" r="23" fill="#ed967d" opacity=".78"/><circle cx="48" cy="37" r="4" fill="#18352d"/><circle cx="72" cy="37" r="4" fill="#18352d"/><path d="M53 64q7 7 14 0" fill="none" stroke="#18352d" stroke-width="2" stroke-linecap="round"/></svg>',
+'<svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 72 30 43l17 29z" fill="#ed7658"/><path d="M36 72 56 25l20 47z" fill="#6ba6ad"/><path d="m67 72 18-35 20 35z" fill="#f4ca68"/><circle cx="30" cy="35" r="8" fill="#f4ca68"/><circle cx="56" cy="17" r="8" fill="#ed7658"/><circle cx="85" cy="29" r="8" fill="#6ba6ad"/><path d="M10 75h100" stroke="#1c5545" stroke-width="3" stroke-linecap="round"/></svg>',
+'<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="30" y="17" width="61" height="64" rx="8" fill="#fffefa" stroke="#1c5545" stroke-width="3"/><rect x="47" y="11" width="27" height="12" rx="5" fill="#f4ca68"/><path d="M41 37h36M41 47h25" stroke="#9ab8a5" stroke-width="3" stroke-linecap="round"/><path d="m42 64 11-10 10 6 17-17" fill="none" stroke="#ed7658" stroke-width="3"/><circle cx="42" cy="64" r="3" fill="#ed7658"/><circle cx="80" cy="43" r="3" fill="#ed7658"/></svg>'
+];
 
-    // Render Soal PG
-    function renderPG() {
-        const container = document.getElementById('pgContainer');
-        let html = '';
-        pgData.forEach((item, index) => {
-            html += `
-            <div class="card card-custom p-4" id="card-pg-${index}">
-                <div class="d-flex justify-content-between align-items-center">
-                    <span class="concept-badge"><i class="fa-solid fa-tag me-1"></i>${item.c}</span>
-                    <span class="badge bg-secondary">Soal ${index + 1} / ${pgData.length}</span>
-                </div>
-                <h5 class="fw-bold mt-2">${index + 1}. ${item.q}</h5>
-                <div class="mt-3">
-            `;
-            item.o.forEach((opt, oIndex) => {
-                html += `
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="pg_${index}" id="pg_${index}_${oIndex}" value="${oIndex}" onchange="updateCount()">
-                    <label class="form-check-label w-100 p-2 rounded border" for="pg_${index}_${oIndex}">
-                        ${String.fromCharCode(65 + oIndex)}. ${opt}
-                    </label>
-                </div>
-                `;
-            });
-            html += `
-                </div>
-                <div class="explanation-box alert alert-success mt-3 d-none" id="exp_${index}">
-                    <strong><i class="fa-solid fa-circle-info me-1"></i> Pembahasan:</strong> ${item.e}
-                </div>
-            </div>
-            `;
-        });
-        container.innerHTML = html;
-        document.getElementById('answered-count').innerText = `Terjawab: 0 / ${pgData.length} Soal`;
-    }
-
-    // Render Soal Esai
-    function renderEssay() {
-        const container = document.getElementById('essayContainer');
-        let html = '';
-        essayData.forEach((item, index) => {
-            html += `
-            <div class="mb-4 p-3 border rounded bg-light">
-                <h5 class="fw-bold text-dark"><i class="fa-solid fa-circle-question text-primary me-2"></i>Soal ${index + 1}</h5>
-                <p class="fs-6 mb-2">${item.q}</p>
-                <div class="mb-2">
-                    <textarea class="form-control" rows="3" placeholder="Ketikkan jawaban Anda di sini..."></textarea>
-                </div>
-                <div class="essay-key" id="essayKey_${index}">
-                    <strong><i class="fa-solid fa-key me-1 text-warning"></i> Kunci Jawaban Resmi:</strong>
-                    <p class="mb-0 mt-1">${item.k}</p>
-                </div>
-            </div>
-            `;
-        });
-        container.innerHTML = html;
-    }
-
-    // Hitung Jumlah Terjawab PG
-    function updateCount() {
-        let count = 0;
-        pgData.forEach((_, index) => {
-            const selected = document.querySelector(`input[name="pg_${index}"]:checked`);
-            if (selected) count++;
-        });
-        document.getElementById('answered-count').innerText = `Terjawab: ${count} / ${pgData.length} Soal`;
-    }
-
-    // Submit & Koreksi PG
-    function submitPG() {
-        let correctCount = 0;
-        const total = pgData.length;
-
-        pgData.forEach((item, index) => {
-            const selected = document.querySelector(`input[name="pg_${index}"]:checked`);
-            const expBox = document.getElementById(`exp_${index}`);
-            
-            // Show explanation
-            expBox.classList.remove('d-none');
-
-            // Reset Styles
-            for(let i=0; i<4; i++) {
-                const label = document.querySelector(`label[for="pg_${index}_${i}"]`);
-                label.classList.remove('correct-answer', 'wrong-answer');
-            }
-
-            if (selected) {
-                const val = parseInt(selected.value);
-                if (val === item.a) {
-                    correctCount++;
-                    document.querySelector(`label[for="pg_${index}_${val}"]`).classList.add('correct-answer');
-                } else {
-                    document.querySelector(`label[for="pg_${index}_${val}"]`).classList.add('wrong-answer');
-                    document.querySelector(`label[for="pg_${index}_${item.a}"]`).classList.add('correct-answer');
-                }
-            } else {
-                // Highlight correct answer if missed
-                document.querySelector(`label[for="pg_${index}_${item.a}"]`).classList.add('correct-answer');
-            }
-        });
-
-        // Calculate score (Scale 0-100)
-        const finalScore = Math.round((correctCount / total) * 100);
-        const scoreDisplay = document.getElementById('score-display');
-        scoreDisplay.innerText = `${finalScore} / 100`;
-
-        if(finalScore >= 75) {
-            scoreDisplay.className = "fs-4 fw-bold text-success";
-        } else {
-            scoreDisplay.className = "fs-4 fw-bold text-danger";
-        }
-
-        alert(`Pemeriksaan Selesai!\nSkor Anda: ${finalScore}\nJumlah Benar: ${correctCount} dari ${total} Soal.`);
-    }
-
-    // Unlocking Essay Answers with Password
-    function unlockEssay() {
-        const pass = document.getElementById('teacherPass').value;
-        if (pass === "guru123" || pass === "sosiologi2026") {
-            essayData.forEach((_, index) => {
-                document.getElementById(`essayKey_${index}`).style.display = 'block';
-            });
-            alert("Kunci jawaban esai berhasil dibuka!");
-        } else {
-            alert("Password salah! Gunakan password guru (guru123 / sosiologi2026).");
-        }
-    }
-
-    // On Load
-    window.onload = function() {
-        renderPG();
-        renderEssay();
-    };
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function makeQuestions(terms){const out=[];terms.forEach(function(t,ti){t[2].forEach(function(scene,si){const picks=[t].concat([1,2,3].map(function(n){return terms[(ti+n)%terms.length]}));const rot=(ti+si)%4;const opts=picks.slice(rot).concat(picks.slice(0,rot));out.push({scene:scene,opts:opts.map(x=>x[0]),answer:(4-rot)%4,why:"<strong>"+esc(t[0])+".</strong> "+esc(t[1])+" <br>Petunjuk pada kasus ini sesuai dengan konsep tersebut: "+esc(scene)})})});return out}
+function saved(){try{return JSON.parse(localStorage.getItem("ruangSosiologiV1")||"{}")}catch(e){return {}}}
+let progress=saved(), active=0;
+const chaptersEl=document.getElementById("chapters");
+function render(){
+chaptersEl.innerHTML=chapterData.map(function(ch,i){const no=i+1;const questions=makeQuestions(ch.terms);const state=progress[no]||{answers:{},score:0};const answered=Object.keys(state.answers||{}).length;
+const lessonHtml=ch.lessons.map(function(lesson){return '<article class="panel card"><h3>'+esc(lesson.title)+'</h3><p>'+esc(lesson.body)+'</p>'+(lesson.bullets?'<ul>'+lesson.bullets.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>':"")+'<div class="example"><strong>Contoh dekat:</strong> '+esc(lesson.example)+'</div></article>'}).join("");
+const goals=ch.goals.map(x=>'<li>'+esc(x)+'</li>').join("");
+const map=conceptMaps[i].map(x=>'<span>'+esc(x)+'</span>').join("<b>→</b>");
+const summary=ch.summary.map(x=>'<li>'+esc(x)+'</li>').join("");
+const essays=essayBanks[i].map(function(e,j){return '<details class="essay"><summary><span>Esai '+String(j+1).padStart(2,"0")+'</span> '+esc(e[0])+'</summary><div class="essay-answer"><p><strong>Contoh jawaban dan pembahasan:</strong></p><p>'+esc(e[1])+'</p></div></details>'}).join("");
+return '<section class="chapter" id="chapter'+no+'" data-chapter="'+no+'"><header class="card chapter-head" style="--tint:'+ch.tint+'"><span class="chapter-icon">'+ch.icon+'</span><div style="position:relative;z-index:1;flex:1"><div class="chapter-number">Bab '+no+' · Materi pembelajaran</div><h2>'+esc(ch.title)+'</h2><p>'+esc(ch.short)+'</p></div><div class="chapter-art">'+svgArts[i]+'</div></header><div class="chapter-layout"><div class="content-col"><article class="panel card"><h3>Tujuan belajar</h3><ul class="targets">'+goals+'</ul><p class="lead">Peta konsep</p><div class="map">'+map+'</div><p>Ikuti bagian materi secara berurutan. Hubungkan konsep dengan pengalaman sehari-hari, tetapi periksa bukti sebelum menarik kesimpulan.</p></article>'+lessonHtml+'<article class="panel card" id="summary'+no+'"><h3>Rangkuman bab '+no+'</h3><ul>'+summary+'</ul><div class="callout"><strong>Refleksi:</strong> Konsep mana yang paling membantu Anda membaca situasi di sekitar? Tuliskan satu contoh, bukti yang perlu diperiksa, dan batas kesimpulan Anda.</div></article><section class="panel card practice" id="quiz'+no+'"><div class="practice-top"><div><h3>Latihan pilihan ganda</h3><p>50 soal dengan umpan balik dan pembahasan langsung.</p></div><span class="count-pill">50 soal</span></div><div class="chapter-progress"><span id="cp'+no+'" style="width:'+Math.round(answered/50*100)+'%"></span></div><div id="quizbox'+no+'"></div></section><section class="panel card" id="essay'+no+'"><div class="practice-top"><div><h3>Latihan esai</h3><p>20 pertanyaan beserta contoh jawaban dan pokok pembahasan.</p></div><span class="count-pill">20 soal</span></div><div class="essay-list">'+essays+'</div></section></div><aside class="side-col"><div class="card sidebox"><h3>Progres bab '+no+'</h3><p id="stat'+no+'">'+answered+' dari 50 soal dijawab</p><div class="chapter-progress"><span id="asideprog'+no+'" style="width:'+Math.round(answered/50*100)+'%"></span></div><button class="btn secondary" onclick="resetQuiz('+no+')">Ulangi latihan</button></div><div class="card sidebox"><h3>Isi bab</h3><a href="#chapter'+no+'">Materi pembelajaran</a><a href="#quiz'+no+'">Latihan 50 pilihan ganda</a><a href="#essay'+no+'">Latihan 20 esai</a><a href="#summary'+no+'">Rangkuman</a></div><div class="card sidebox"><h3>Ilustrasi konsep</h3><p>Gunakan diagram sebagai peta awal. Perhatikan hubungan antarbagian, kemudian uji pemahaman dengan contoh dan latihan.</p></div></aside></div></section>'
+}).join("");
+updateOverall();renderQuiz(1);renderQuiz(2);renderQuiz(3);renderQuiz(4)
+}
+function renderQuiz(no){const i=no-1,ch=chapterData[i],qs=makeQuestions(ch.terms),box=document.getElementById("quizbox"+no);if(!box)return;const st=progress[no]||{answers:{},score:0};const idx=st.current==null?0:st.current;
+if(idx>=qs.length){const score=st.score||0;box.innerHTML='<div class="finish"><h3>Latihan selesai 🎉</h3><p>Anda telah menuntaskan 50 soal Bab '+no+'. Gunakan pembahasan untuk meninjau kembali konsep yang belum mantap.</p><div class="finish-score">'+score+' / 50</div><button class="btn secondary" onclick="goToQuestion('+no+',49)">Tinjau soal terakhir</button> <button class="btn" onclick="resetQuiz('+no+')">Ulangi latihan</button></div>';return}
+const q=qs[idx],selected=(st.answers||{})[idx],done=selected!==undefined;
+box.innerHTML='<div class="q-track"><span style="width:'+((idx+1)/50*100)+'%"></span></div><div class="practice-top"><p><strong>Soal '+(idx+1)+' dari 50</strong></p><span class="count-pill">Skor '+(st.score||0)+'</span></div><p class="scenario">'+esc(q.scene)+'</p><p class="question">Konsep sosiologi yang paling tepat untuk menjelaskan situasi tersebut adalah …</p><div class="options">'+q.opts.map(function(o,j){let cls="";if(done&&j===q.answer)cls=" correct";if(done&&j===selected&&j!==q.answer)cls=" wrong";return '<button class="option'+cls+'" '+(done?"disabled":"")+' onclick="answer('+no+','+idx+','+j+')"><span class="letter">'+String.fromCharCode(65+j)+'</span><span>'+esc(o)+'</span></button>'}).join("")+'</div>'+(done?'<div class="feedback '+(selected===q.answer?"":"bad")+'"><strong>'+(selected===q.answer?"Tepat!":"Belum tepat — mari pahami konsepnya.")+'</strong><p>'+q.why+'</p></div>':"")+'<div class="controls"><button class="btn secondary" '+(idx===0?"disabled":"")+' onclick="goToQuestion('+no+','+(idx-1)+')">← Sebelumnya</button><button class="btn" '+(!done?"disabled":"")+' onclick="goToQuestion('+no+','+(idx+1)+')">'+(idx===49?"Lihat hasil":"Berikutnya →")+'</button></div>';
+document.getElementById("cp"+no).style.width=Math.round(Object.keys(st.answers||{}).length/50*100)+"%";document.getElementById("asideprog"+no).style.width=Math.round(Object.keys(st.answers||{}).length/50*100)+"%";document.getElementById("stat"+no).textContent=Object.keys(st.answers||{}).length+" dari 50 soal dijawab"
+}
+function store(){localStorage.setItem("ruangSosiologiV1",JSON.stringify(progress));updateOverall()}
+function answer(no,idx,pick){const st=progress[no]||{answers:{},score:0};if(st.answers[idx]!==undefined)return;const q=makeQuestions(chapterData[no-1].terms)[idx];st.answers[idx]=pick;if(pick===q.answer)st.score=(st.score||0)+1;progress[no]=st;store();renderQuiz(no)}
+function goToQuestion(no,idx){const st=progress[no]||{answers:{},score:0};st.current=Math.max(0,Math.min(50,idx));progress[no]=st;store();renderQuiz(no)}
+function resetQuiz(no){if(!confirm("Hapus jawaban dan mulai ulang latihan Bab "+no+"?"))return;progress[no]={answers:{},score:0,current:0};store();renderQuiz(no)}
+function updateOverall(){const done=[1,2,3,4].reduce((n,k)=>n+Object.keys((progress[k]||{answers:{}}).answers||{}).length,0);document.getElementById("overallProgress").textContent="Progres belajar: "+Math.round(done/200*100)+"%"}
+document.querySelectorAll("[data-nav]").forEach(function(btn){btn.addEventListener("click",function(){const n=Number(btn.dataset.nav);document.querySelectorAll("[data-nav]").forEach(b=>b.classList.remove("active"));btn.classList.add("active");if(n===0)document.getElementById("home").scrollIntoView({behavior:"smooth"});else document.getElementById("chapter"+n).scrollIntoView({behavior:"smooth"})})});
+render();
 </script>
 </body>
 </html>
